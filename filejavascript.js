@@ -1,5 +1,5 @@
 
-let url = "http://localhost:8888/cv_vjpb/wp-json/wp/v2/posts?per_page=50";
+const url = "http://localhost:8888/cv_vjpb/wp-json/wp/v2/posts?per_page=50";
 
 fetch(url)
 .then(function (response) {
@@ -96,24 +96,11 @@ fetch(url)
         }
     }
 }); 
-// oculta el navbar------------------------------------------------------------
-// let  hideNavbar = window.pageYOffset;
-// window.onscroll = function() {
-// let currentScrollPos = window.pageYOffset;
-//   if (hideNavbar > currentScrollPos) {
-//     document.getElementById("navbar").style.top = "0";
-//   } else {
-//     document.getElementById("navbar").style.top = "-50px"; 
-//   }
-//   hideNavbar = currentScrollPos;
-// }
-// //----------------------------------------------------------------------------
 
-var mybutton = document.getElementById("myBtn");
 
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
+const mybutton = document.querySelector("#myBtn");
+console.log(mybutton);
+window.onscroll = function scrollFunction() {
 
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
@@ -127,7 +114,18 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-
+// oculta el navbar------------------------------------------------------------
+// let  hideNavbar = window.pageYOffset;
+// window.onscroll = function() {
+// let currentScrollPos = window.pageYOffset;
+//   if (hideNavbar > currentScrollPos) {
+//     document.getElementById("navbar").style.top = "0";
+//   } else {
+//     document.getElementById("navbar").style.top = "-50px"; 
+//   }
+//   hideNavbar = currentScrollPos;
+// }
+// //----------------------------------------------------------------------------
 
 
 
