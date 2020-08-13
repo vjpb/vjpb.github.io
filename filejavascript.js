@@ -16,13 +16,14 @@ fetch(url)
         if (apicv[i].categories[0] === 3) {
             skill.insertAdjacentHTML(
                 "beforeEnd",
-                `<div class="skills">
-                    <p> 
+                `<p> 
                         ` + apicv[i].title.rendered +`
-                    </p>
-                    <p> 
-                     ` + apicv[i].porcent + `%
-                    </p>
+                </p>
+                <div class="skills">
+                    <div class="progress-bars">
+                        <div class="bars-level" style="width:` + apicv[i].porcent +`%">                    
+                        </viv>
+                    </div>
                 </div>`
             );   
         }
@@ -99,7 +100,6 @@ fetch(url)
 
 
 const mybutton = document.querySelector("#myBtn");
-console.log(mybutton);
 window.onscroll = function scrollFunction() {
 
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
