@@ -16,13 +16,16 @@ fetch(url)
         if (apicv[i].categories[0] === 3) {
             skill.insertAdjacentHTML(
                 "beforeEnd",
-                `<p> 
+                `<h4 class="progress-title"> 
                         ` + apicv[i].title.rendered +`
-                </p>
+                </h4>
                 <div class="skills">
                     <div class="progress-bars">
-                        <div class="bars-level" style="width:` + apicv[i].porcent +`%">                    
-                        </viv>
+                        <div class="bars-level" style="width:` + apicv[i].porcent +`%">    
+                            <div class="bar-porcent">
+                            `+ apicv[i].porcent +`%
+                            </div>
+                        </div>
                     </div>
                 </div>`
             );   
