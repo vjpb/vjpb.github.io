@@ -9,135 +9,270 @@ html {
     scroll-behavior: smooth;
   }
 body{
-    background-color: #1b1b1e;
+    background-color: #262626;
     color: #F7EBEC;
     width: 100%;
 }
 section{
     min-height: 100vh;
 }
-
-#navbar {
-    background: #96031A;
-    padding: 10px 0;
-    position: fixed;
-    text-align: center;
-    display: block;
-    width: 100%;
-    transition: top 0.6s;
-}
-header a{
-    padding: 10px;
-    color: #F7EBEC;
-}
-.section-banner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.section-banner  h2 ~ h1 {
-    padding: 10px 0;
-}
-#about img{
-    width: 300px;
-    padding: 2em;
-    /* position: absolute; */
-    left: 0em;
-    border-radius: 150px;
-}
-.motto p{
-    display: flex;
-    justify-content: center;
-    padding: 2em;
-}
-.title{
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    padding: 16px 0;
-}
-
-.progress-title{
-    display: flex;
-    justify-content: space-around;}
-.bar-porcent{
-    margin: 6px 0;
-}
-.progress-bars{
-    background: #96031A;
-    height: 2rem;
-    width: 50%;
-    margin: 1rem auto;   
-    border-radius: 0.5rem;
-    box-shadow: 4px 0 5px #000 inset;
-}
-.bars-level{
-    display: inline-block;
-    height: 100%;
-    border-radius: 3px;
-    color: black;
-    text-align: center;
-    box-shadow: 4px 0 5px #000 inset;
-    transition: width 0.4s ease-in-out;
-    background: #ccc;
-    animation: bars-level 2s;
-}
-
-@keyframes bars-level{
-    0%
-    {
-        width: 0;
+/* === Style for section Navbar === */
+    #navbar {
+        background: #96031A;
+        padding: 10px 0;
+        position: fixed;
+        text-align: center;
+        display: block;
+        width: 100%;
+        transition: top 0.6s;
+        z-index: 1;
     }
-}
-.bars-level:hover{
-    box-shadow: 4px 0 5px #000 inset;
-    background: #faa916;
-}
+    header a{
+        padding: 10px;
+        color: #F7EBEC;
+    }
+/* === End style section Navbar === */
 
-#portfolio-pictures img{
-    width: 200px;
-}
-footer{
-    min-height: 20vh;
-}
-.top-up{
-    text-align: -webkit-right;
-    margin-right: 25px;
-}
-#myBtn{
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    font-size: 18px;
-    border: none;
-    background-color: #5eb1bf;
-    color:#F7EBEC;
-    cursor: pointer;
-    padding: 17px;
-    border-radius: 27px;
-}
+/* ==== Start style for section home === */
+    .section-banner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .section-banner  h2 ~ h1 {
+        padding: 10px 0;
+    }
+    #home img{
+        width: 300px;
+        padding: 2em;
+        /* position: absolute; */
+        left: 0em;
+        border-radius: 150px;
+    }
+/* === End style section Resume === */
+
+/* ==== Sart style for section resume === */
+    .motto p{
+        display: flex;
+        justify-content: center;
+        padding: 2em;
+    }
+    .title{
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        padding: 16px 0;
+    }
+    /* Start bars progress style  */
+
+    .progress-title{
+        display: flex;
+        justify-content: space-around;}
+    .bar-porcent{
+        margin: 6px 0;
+    }
+    .progress-bars{
+        background: #96031A;
+        height: 2rem;
+        width: 50%;
+        margin: 1rem auto;   
+        border-radius: 0.5rem;
+        box-shadow: 4px 0 5px #000 inset;
+    }
+    .bars-level{
+        display: inline-block;
+        height: 100%;
+        border-radius: 3px;
+        color: black;
+        text-align: center;
+        box-shadow: 4px 0 5px #000 inset;
+        transition: width 0.4s ease-in-out;
+        background: #ccc;
+        animation: bars-level 2s;
+    }
+    @keyframes bars-level{
+        0%
+        {
+            width: 0;
+        }
+    }
+    .bars-level:hover{
+        box-shadow: 4px 0 5px #000 inset;
+        background: #faa916;
+    }
+    /*  End bars progress style  */
+
+    /* Start flip card style */
+    .flip-card{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        z-index: 2;
+        flex-wrap: wrap;
+    }
+    .flip {
+        background-color: transparent;
+        width: 250px;
+        height: 270px;
+        perspective: 1000px;
+        margin: 10px;
+    }
+    .flip-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);   
+    }
+    .flip:hover .flip-inner {
+        transform: rotateX(180deg);
+    }
+    .flip-front img{
+        width:250px;
+        height:270px;
+        border-radius:20px;
+
+    }
+    .flip-front, .flip-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius:20px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .flip-front {
+        background-color: #bbb;
+        color: black;
+        transform-style: preserve-3d;
+
+    }
+    .flip-front .centered-text{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 13%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .flip-front .centered-text2{
+        position: absolute;
+        width: 90%;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .flip-back {
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(150,3,26,1) 50%);
+        color: white;
+        transform: rotateX(180deg);
+    }
+    .flip-back .centered-text3{
+        position: absolute;
+        width: 90%;
+        top: 13%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .flip-back .centered-text4{
+        position: absolute;
+        width: 90%;
+        top: 58%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* End flip card style */
+
+    /* Start work-card style */
+    .work-card-items{
+        background: #333;
+        padding: 20px;
+        width: 300px;
+        height: 353px;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: 2px solid #96031A;
+        box-shadow: 0 9px 6px #96031A;
+        position: relative;
+        overflow: hidden;
+    }
+    .work-card-items::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(172deg, rgba(2,0,36,1) 0%, rgba(150,3,26,1) 50%);
+        position: absolute;
+        bottom: -100%;
+        z-index: 0;
+    }
+    .work-card-items:hover::before{
+        bottom: 0;
+        transition: all .5s;
+    }
+    .work-card-items h3, .work-card-items h4{
+        text-align: center;
+        color: #5eb1bf;
+        z-index: 0;
+
+    }
+    .work-card-items h3{
+        font-size:20px ;
+        
+    }
+     
+    .work-card-items p{
+        text-align: center;
+        color: #fff;
+        line-height: 20px;
+        z-index: 0;
+
+    }
+    .text-card{
+        display: flex;
+        align-items: center;
+        margin: 10px 0 0 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        z-index: 0;
+
+    }
+
+/* === End style section Resume === */
 
 
-/* Style for banner */
-/* .banner{
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2em;
-} */
-/* Style for background image */
-/* .container{
-    background-image: url("Imagenes/photo.JPG");
-    width: 100%;
-    height: 900px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-} */
-/* Style for menu */
+/* === Start style for section portfolio === */
+    #portfolio-pictures img{
+        width: 200px;
+    }
+    footer{
+        min-height: 20vh;
+    }
+    .top-up{
+        text-align: -webkit-right;
+        margin-right: 25px;
+    }
+/* === End style section Portfolio === */
+
+/* Button go to up */
+    #myBtn{
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        font-size: 18px;
+        border: none;
+        background-color: #5eb1bf;
+        color:#F7EBEC;
+        cursor: pointer;
+        padding: 17px;
+        border-radius: 27px;
+    }
+
+
+

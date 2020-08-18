@@ -11,7 +11,6 @@
     <header>
             <nav id="navbar">
                 <a href="#home">Home</a>
-                <a href="#about">About</a>
                 <a href="#resume">Resume</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#contact">Contact</a>
@@ -19,7 +18,8 @@
     </header>
 
     <div class="container">
-        <section class="section-banner" id="home" >
+        <section class="section-banner" id="home">
+            <img src="Imagenes/profile.jpeg" alt="profile picture">
             <h2>
                 Soy Victor Pedroza
             </h2>
@@ -31,32 +31,7 @@
             </p>
         </section>
 
-        <section class="section-about" id="about">
-            <img src="Imagenes/profile.jpeg" alt="profile picture">
-            <div class="section-about">
-                <article>
-                    <h3>
-                        About me
-                    </h3>
-                    <p> 
-                        My passion is learn everyday something new, I’m Technical in computer analysis and programming, with experience in programming WordPress, PHP, HTML5, CSS3, JavaScript, Scrum, GitHub, maintenance of equipment, networks and creation of WEB pages. Self-made, and ready for any challenge!
-                    <br>
-                        I’m a Petroleum and gas engineer with a master in oil and gas well drilling technology. I graduated in Russia and have wide international background in Asia, America and Europe.
-                    </p>
-                </article>
-                <article>
-                    <h3>
-                        Contact Details
-                    </h3>
-                    <p>
-                        Victor Julian Pedroza Bello <br>
-                        Bogotá – Cundinamarca <br>
-                        +57 (300) 242-41-70 <br>
-                        vjpb881104@yandex.ru <br>
-                    </p>
-                </article>
-            </div>
-        </section>
+        
 
         <section class="section-resume bar" id="resume">
             <div class="motto">
@@ -75,13 +50,17 @@
                 <h3 class="title">
                     Education
                 </h3>
-                <div id="education"></div>
+                <div id="education" class="flip-card">
+                    <!-- Information from API -->
+                </div>
             </div>
             <div>
                 <h3 class="title">
                     Work experience
                 </h3>
-                <div id="work-experience"></div>
+                <div id="work-experience" class="flip-card">
+                    <!-- Information from API -->
+                </div>
             </div>
         </section>
 
@@ -99,6 +78,17 @@
                     <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea><br>
                     <input type="submit" value="Enviar">
                 </form>
+                <article>
+                    <h3>
+                        Contact Details
+                    </h3>
+                    <p>
+                        Victor Julian Pedroza Bello <br>
+                        Bogotá – Cundinamarca <br>
+                        +57 (300) 242-41-70 <br>
+                        vjpb881104@yandex.ru <br>
+                    </p>
+                </article>
         </section>
         <div class="top-up">
             <button onclick="topFunction()" id="myBtn" title="Go to top">

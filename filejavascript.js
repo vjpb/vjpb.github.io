@@ -13,6 +13,7 @@ fetch(url)
     const portfolio = document.getElementById("portfolio-pictures"); 
     
     for (i = 0; i < apicv.length; i++) {
+        userData = apicv[i];
         if (apicv[i].categories[0] === 3) {
             skill.insertAdjacentHTML(
                 "beforeEnd",
@@ -30,48 +31,61 @@ fetch(url)
                 </div>`
             );   
         }
-        if (apicv[i].categories[0] === 6) {
+        if (apicv[i].categories[0] === 2) {
             education.insertAdjacentHTML(
                 "beforeEnd",
-                `<div class="education">
-                    <p> 
-                        ` + apicv[i].name_work +`
-                    </p>
-                    <p> 
-                        ` + apicv[i].job + `
-                    </p>
-                    <p> 
-                        ` + apicv[i].start_date + `
-                    </p>
-                    <p> 
-                        ` + apicv[i].finish_date + `
-                    </p>
-                    <p> 
-                        ` + apicv[i].responsibility + `
-                    </p>
+                `<div class="flip">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <img src="Imagenes/Study.jpg" alt="Study icon">
+                            <div>
+                                <p class="centered-text">
+                                    ${ userData.university}
+                                </p>
+                                <p class="centered-text2">
+                                    ${ userData.degree}
+                                </p>
+                            </div>    
+                        </div>
+                        <div class="flip-back">
+                            <div>
+                                <p class="centered-text3"> 
+                                    ${ userData.start_study}
+                                     - 
+                                    ${ userData.graduation_date}
+                                </p>
+                                <div class="centered-text4">
+                                    ${ userData.description}
+                                </div>                                
+                            </div>        
+                        </div>
+                    </div>
                 </div>`
             );   
         }
-        if (apicv[i].categories[0] === 2 ) {
+        if (apicv[i].categories[0] === 6 ) {
             work_experience.insertAdjacentHTML(
-                "beforeEnd",
-                `<div class="work-experience">
-                    <p> 
-                        ` + apicv[i].university +`
+            "beforeEnd",
+            `<div class="work-card-items">
+                <h3> 
+                ` + apicv[i].name_work +`
+                </h4>
+                <h4> 
+                ` + apicv[i].job + `
+                </h4>
+                <div class="text-card">
+                    <p>  
+                    ` + apicv[i].start_date + ` - 
                     </p>
                     <p> 
-                        ` + apicv[i].degree + `
+                    ` + apicv[i].finish_date + `
                     </p>
                     <p> 
-                        ` + apicv[i].start_study + `
+                    ` + apicv[i].responsibility + `
                     </p>
-                    <p> 
-                        ` + apicv[i].graduation_date + `
-                    </p>
-                    <p> 
-                        ` + apicv[i].description + `
-                    </p>
-                </div>`
+                </div>            
+                
+            </div>`            
             );   
         }
         if (apicv[i].categories[0] === 10 ) {
