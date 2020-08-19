@@ -115,34 +115,42 @@ fetch(url)
     }
 }); 
 
+/* ==== Start Go top up function === */
 
 const mybutton = document.querySelector("#myBtn");
 window.onscroll = function scrollFunction() {
 
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
         mybutton.style.display = "block";
     } else {
         mybutton.style.display = "none";
     }
 }
-
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+/* ==== End Go top up function === */
 
-// oculta el navbar------------------------------------------------------------
-// let  hideNavbar = window.pageYOffset;
-// window.onscroll = function() {
-// let currentScrollPos = window.pageYOffset;
-//   if (hideNavbar > currentScrollPos) {
-//     document.getElementById("navbar").style.top = "0";
-//   } else {
-//     document.getElementById("navbar").style.top = "-50px"; 
-//   }
-//   hideNavbar = currentScrollPos;
-// }
-// //----------------------------------------------------------------------------
+
+/* ==== Start hightlight NavBar function === */
+
+const links = document.querySelectorAll('.active-nav');
+const sections = document.querySelectorAll('section');
+
+function changeLinkState() {
+  let index = sections.length;
+
+  while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+  
+  links.forEach((link) => link.classList.remove('highlight-nav'));
+  links[index].classList.add('highlight-nav');
+}
+
+changeLinkState();
+window.addEventListener('scroll', changeLinkState);
+
+/* ==== End hightlight NavBar function === */
 
 
 
