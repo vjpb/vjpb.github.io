@@ -96,9 +96,12 @@ section{
         box-shadow: 4px 0 5px #000 inset;
         transition: width 0.4s ease-in-out;
         background: #ccc;
-        animation: bars-level 2s;
+        
     }
-    @keyframes bars-level{
+    .animation-progress .animation-bars{
+        animation: time-progress 2s;
+    }
+    @keyframes time-progress{
         0%
         {
             width: 0;

@@ -1,4 +1,6 @@
 
+
+
 const url = "http://localhost:8888/cv_vjpb/wp-json/wp/v2/posts?per_page=50";
 
 fetch(url)
@@ -22,8 +24,8 @@ fetch(url)
                 </h4>
                 <div class="skills">
                     <div class="progress-bars">
-                        <div class="bars-level" style="width:` + apicv[i].porcent +`%">    
-                            <div class="bar-porcent">
+                        <div class="bars-level animation-bars"  style="width:` + apicv[i].porcent +`%">    
+                            <div class="bar-porcent" >
                             `+ apicv[i].porcent +`%
                             </div>
                         </div>
@@ -113,7 +115,7 @@ fetch(url)
             );   
         }
     }
-}); 
+    });  
 
 /* ==== Start Go top up function === */
 
@@ -139,12 +141,11 @@ const links = document.querySelectorAll('.active-nav');
 const sections = document.querySelectorAll('section');
 
 function changeLinkState() {
-  let index = sections.length;
+    let index = sections.length;
 
-  while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
-  
-  links.forEach((link) => link.classList.remove('highlight-nav'));
-  links[index].classList.add('highlight-nav');
+    while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+    links.forEach((link) => link.classList.remove('highlight-nav'));
+    links[index].classList.add('highlight-nav');
 }
 
 changeLinkState();
@@ -152,57 +153,37 @@ window.addEventListener('scroll', changeLinkState);
 
 /* ==== End hightlight NavBar function === */
 
+/* ==== Start animation Bar progress View port function === */
 
+var isOutOfViewport = function (elem) {
 
-// function unaFuncion(category){
+	// Get element's bounding
+	var bounding = elem.getBoundingClientRect();
 
+	// Check if it's out of the viewport on each side
+	var out = {};
+	out.top = bounding.top < 0;
+	out.left = bounding.left < 0;
+	out.bottom = bounding.bottom > (window.innerHeight || document.documentElement.clientHeight);
+	out.right = bounding.right > (window.innerWidth || document.documentElement.clientWidth);
+	out.any = out.top || out.left || out.bottom || out.right;
 
-//     return fetch(url)
-//     .then(function (response) {
-//         return response.json();
-//     })
-//     .then((apicv) => { 
-//         obj = {};
-//         for (i = 0; i < data.length; i++) {
-//             if (data[i].categories[0] === category) {
-// // debo llenar el objeto
+	return out;
 
-//             }
-//         }
-//         return obj;
-//     });
-// }
+};
 
-// unaFuncion(3);
+var elem = document.querySelector('#skills');
+console.log(elem);
+var logViewport = function () {
+	var isOut = isOutOfViewport(elem);
+	if (isOut.any) {
+		elem.classList.remove('animation-progress');
+	} else {
+		elem.classList.add('animation-progress');
+	}
+};
 
+logViewport();
+window.addEventListener('scroll', logViewport, false);
 
-// function suma(a, b){
-//     const total = a + b;
-//     return total;
-// }
-// const resultado = suma(11, 3);
-// console.log(resultado);
-
-// function nuevaFuncion(a){
-//     return typeof a;
-// }
-// console.log( nuevaFuncion({}));
-
-// function recibirParametro(a){
-//     if(typeof a === "number"){
-//        return a * 2;
-//     }else{
-//         return "No es un numero, " + a + ", es otro tipo de dato";
-//     }
-// }
-// console.log(recibirParametro("casa"));
-
-// let number = 3;
-// console.log(number);
-
-// function numberFuncion(){
-//     let number = 4;
-//     console.log(number);
-// }
-// numberFuncion();
-// console.log(number);
+/* ==== End animation Bar progress View port function === */
