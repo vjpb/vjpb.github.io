@@ -69,7 +69,9 @@ section{
         display: flex;
         justify-content: center;
         text-transform: uppercase;
-        padding: 16px 0;
+        font-size: 26px;
+        padding: 3em 0 2em;
+
     }
     /* Start bars progress style  */
 
@@ -256,10 +258,136 @@ section{
 /* === End style section Resume === */
 
 
-/* === Start style for section portfolio === */
-    #portfolio-pictures img{
-        width: 200px;
+/* === Start style for section modal-portfolio === */
+    .title-portfolio{
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 26px;
+        padding: 3em 0 2em;
     }
+    .click-picture img{
+        width: 300px;
+   
+    }
+    .click-picture{
+        position: relative;
+    }
+    .portfolio-pictures{
+        display: inline-block;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+    #portfolio-work-done{
+        justify-content: center;
+        display: flex;    
+        align-items: center;
+        flex-wrap: wrap;}
+    .overlay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.7); 
+        color: #fff;
+        visibility: hidden;
+        opacity: 0;
+      
+        /* transition effect. not necessary */
+        transition: opacity .3s, visibility .3s;
+    }
+    .click-picture:hover .overlay {
+        visibility: visible;
+        opacity: 1;
+        width: 300px;
+        cursor: pointer;
+    }
+    .overlay h4,h5{
+        padding: 10px 10px 0;
+    }
+    .modal-picture{
+        max-width: 100%;
+        height: auto;
+    }
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    }
+    .modal-content {
+        position: relative;
+        background-color: #333;
+        margin: auto;
+        padding: 0;
+        width: 45%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+        from {top:-300px; opacity:0} 
+        to {top:0; opacity:1}
+    }
+    
+    @keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:0; opacity:1}
+    }
+    #data-modal {
+        display: contents;
+    }
+    .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+    
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .modal-article {
+        padding: 10px;
+    }
+    .article h4{
+        text-align: center;
+        font-size:18px;
+        text-transform: uppercase;
+    }
+    .modal-article p{
+        text-align: justify;
+        line-height: 1.6;
+    }
+    .tags{
+        padding: 10px;
+    }
+    .modal-footer {
+        padding: 7px ;
+        background-color: #96031A;
+        color: white;
+    }
+    .modal-footer a{
+        color: #F7EBEC;
+    }
+    .modal-footer span{
+        margin: -5px 10px;
+    }
+/* === End style section modal-portfolio === */
     footer{
         min-height: 20vh;
     }
@@ -267,8 +395,6 @@ section{
         text-align: -webkit-right;
         margin-right: 25px;
     }
-/* === End style section Portfolio === */
-
 /* Button go to up */
     #myBtn{
         display: none;
