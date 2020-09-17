@@ -40,37 +40,19 @@ section{
    
 /* === End style section Navbar === */
 
-/* ==== Start style for section home === */
-    .section-banner{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .section-banner  h2 ~ h1 {
-        padding: 10px 0;
-    }
-    #home img{
-        width: 300px;
-        padding: 2em;
-        position: absolute;
-        left: 0em;
-        border-radius: 150px;
-    }
-/* === End style section Resume === */
 
 /* ==== Sart style for section resume === */
     .motto p{
         display: flex;
         justify-content: center;
-        padding: 2em;
+        padding: 4em 0 1rem;
     }
     .title{
         display: flex;
         justify-content: center;
         text-transform: uppercase;
         font-size: 26px;
-        padding: 3em 0 2em;
+        padding: 1em 0 2em;
 
     }
     /* Start bars progress style  */

@@ -1,112 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="materializestyle.css" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Cv Victor Pedroza</title>
-</head>
-<body>
-
-    <header >
-            <nav  id="navbar">
-                <a class="active-nav" href="#home">Home</a>
-                <a class="active-nav" href="#resume">Resume</a>
-                <a class="active-nav" href="#portfolio">Portfolio</a>
-                <a class="active-nav" href="#contact">Contact</a>
-            </nav>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <a class="active-nav" href="#home">Home</a>
+        <a class="active-nav" href="#resume">Resume</a>
+        <a class="active-nav" href="#portfolio">Portfolio</a>
+        <a class="active-nav" href="#contact">Contact</a>
+      </nav>
     </header>
-
+    <div id="home" class="carousel carousel-slider center">
+      <div class="carousel-item white-text">
+        <img src="Imagenes/me.JPG" />
+        <div class="centered">
+          <p class="white-text">Hola!</p>
+          <h2>Soy Victor Pedroza</h2>
+        </div>
+      </div>
+      <div class="carousel-item white-text">
+        <img src="Imagenes/web-developer.jpg" />
+        <div class="centered">
+          <h2>FrontEnd Developer</h2>
+          <p class="white-text">Web development is my passion!</p>
+        </div>
+      </div>
+      <div class="carousel-item white-text">
+        <img src="Imagenes/Kashalka.jpg" />
+        <div class="centered">
+          <p class="white-text">But Engineering is my profession.</p>
+          <h2>Oil and Gras Engineer</h2>
+        </div>
+      </div>
+    </div>
     <div class="container">
-        <section class="section-banner" id="home">
-            <img src="Imagenes/profile.jpeg" alt="profile picture">
-            <h2>
-                Soy Victor Pedroza
-            </h2>
-            <h1>
-                FrontEnd Developer
-            </h1>
-            <p>
-                Engineering is my profession,  web development is my passion.
-            </p>
-        </section>
-
-        <section class="section-resume bar" id="resume">
-            <div class="motto">
-                <p>
-                    My motto is: “Experience and Attention to the detail is what quality is made of”
-                </p>
-                <h3 class="title">
-                    Skills
-                </h3>
-                <div id="skills"> 
-                    <!-- Information from API -->
-                </div>
-                <br>
-            </div>
-            <div>
-                <h3 class="title">
-                    Education
-                </h3>
-                <div id="education" class="flip-card">
-                    <!-- Information from API -->
-                </div>
-            </div>
-            <div>
-                <h3 class="title">
-                    Work experience
-                </h3>
-                <div id="work-experience" class="flip-card">
-                    <!-- Information from API -->
-                </div>
-            </div>
-        </section>
-
-        <section class="section-portfolio" id="portfolio">
-            <h3 class="title-portfolio">
-                Check out my job
-            </h3>
-            <div id="portfolio-work-done">
-                    <!-- Information from API -->               
-            </div>
-        </section>
-
-        <section class="section-contact" id="contact">
-                <form action="" method="post">
-                    <input type="text" id="" name="" placeholder="Name" ><br>
-                    <input type="email" id="" name="" placeholder="Email"><br>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea><br>
-                    <input type="submit" value="Enviar">
-                </form>
-                <article>
-                    <h3>
-                        Contact Details
-                    </h3>
-                    <p>
-                        Victor Julian Pedroza Bello <br>
-                        Bogotá – Cundinamarca <br>
-                        +57 (300) 242-41-70 <br>
-                        vjpb881104@yandex.ru <br>
-                    </p>
-                </article>
-        </section>
-        <div class="top-up">
-            <button onclick="topFunction()" id="myBtn" title="Go to top">
-                ▲
-            </button>
-        </div>
-    </div>
-    <footer>
-    </footer>
-    <div id="myModal" class="modal">
-        <div id="data-modal">
+      <section class="section-resume bar" id="resume">
+        <div class="motto">
+          <p>
+            My motto is: “Experience and Attention to the detail is what quality
+            is made of”
+          </p>
+          <h3 class="title">Skills</h3>
+          <div id="skills">
             <!-- Information from API -->
+          </div>
+          <br />
         </div>
-    </div>
+        <div>
+          <h3 class="title">Education</h3>
+          <div id="education" class="flip-card">
+            <!-- Information from API -->
+          </div>
+        </div>
+        <div>
+          <h3 class="title">Work experience</h3>
+          <div id="work-experience" class="flip-card">
+            <!-- Information from API -->
+          </div>
+        </div>
+      </section>
 
+      <section class="section-portfolio" id="portfolio">
+        <h3 class="title-portfolio">Check out my job</h3>
+        <div id="portfolio-work-done">
+          <!-- Information from API -->
+        </div>
+      </section>
+
+      <section class="section-contact" id="contact">
+        <form action="" method="post">
+          <input type="text" id="" name="" placeholder="Name" /><br />
+          <input type="email" id="" name="" placeholder="Email" /><br />
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea
+          ><br />
+          <input type="submit" value="Enviar" />
+        </form>
+        <article>
+          <h3>Contact Details</h3>
+          <p>
+            Victor Julian Pedroza Bello <br />
+            Bogotá – Cundinamarca <br />
+            +57 (300) 242-41-70 <br />
+            vjpb881104@yandex.ru <br />
+          </p>
+        </article>
+      </section>
+      <div class="top-up">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
+      </div>
+    </div>
+    <footer></footer>
+    <div id="myModal" class="modal">
+      <div id="data-modal">
+        <!-- Information from API -->
+      </div>
+    </div>
 
     <script defer src="filejavascript.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="js/bin/materialize.min.js"></script>
+    <script>
+      var options = {
+        fullWidth: true,
+        indicators: true,
         
+      };
 
-</body>
+      document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll(".carousel");
+        var instances = M.Carousel.init(elems, options);
+      });
+    </script>
+  </body>
 </html>
