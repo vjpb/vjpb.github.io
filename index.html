@@ -22,29 +22,31 @@
         <a class="active-nav" href="#contact">Contact</a>
       </nav>
     </header>
-    <div id="home" class="carousel carousel-slider center">
-      <div class="carousel-item white-text">
-        <img src="Imagenes/me.JPG" />
-        <div class="centered">
-          <p class="white-text">Hola!</p>
-          <h2>Soy Victor Pedroza</h2>
+    <section id="home">
+      <div class="carousel carousel-slider center">
+        <div class="carousel-item white-text">
+          <img src="Imagenes/me.JPG" />
+          <div class="centered">
+            <p class="white-text">Hola!</p>
+            <h2>Soy Victor Pedroza</h2>
+          </div>
+        </div>
+        <div class="carousel-item white-text">
+          <img src="Imagenes/web-developer.jpg" />
+          <div class="centered">
+            <h2>FrontEnd Developer</h2>
+            <p class="white-text">Web development is my passion!</p>
+          </div>
+        </div>
+        <div class="carousel-item white-text">
+          <img src="Imagenes/Kashalka.jpg" />
+          <div class="centered">
+            <p class="white-text">But Engineering is my profession.</p>
+            <h2>Oil and Gras Engineer</h2>
+          </div>
         </div>
       </div>
-      <div class="carousel-item white-text">
-        <img src="Imagenes/web-developer.jpg" />
-        <div class="centered">
-          <h2>FrontEnd Developer</h2>
-          <p class="white-text">Web development is my passion!</p>
-        </div>
-      </div>
-      <div class="carousel-item white-text">
-        <img src="Imagenes/Kashalka.jpg" />
-        <div class="centered">
-          <p class="white-text">But Engineering is my profession.</p>
-          <h2>Oil and Gras Engineer</h2>
-        </div>
-      </div>
-    </div>
+    </section>
     <div class="container">
       <section class="section-resume bar" id="resume">
         <div class="motto">
@@ -79,32 +81,95 @@
         </div>
       </section>
 
-      <section class="section-contact" id="contact">
-        <form action="" method="post">
-          <input type="text" id="" name="" placeholder="Name" /><br />
-          <input type="email" id="" name="" placeholder="Email" /><br />
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Message"
-          ></textarea
-          ><br />
-          <input type="submit" value="Enviar" />
-        </form>
+      <section id="contact">
+        <div class="section-contact">
+          <div class="contact-title">
+            <h3>Contat me</h3>
+            <p>I'm ready for any challenge!</p>
+          </div>
+          <form id="contact-form" action="" method="post">
+            <input
+              name="name"
+              type="text"
+              class="form-control"
+              placeholder="First Name"
+              minlength="3"
+              maxlength="20"
+              pattern="[A-Za-z]+"
+              title="The First Name cannot contain numbers or symbols"
+              required
+            />
+            <br />
+            <input
+              name="lastname"
+              type="text"
+              class="form-control"
+              placeholder="Last Name"
+              minlength="3"
+              maxlength="20"
+              pattern="[A-Za-z]+"
+              title="The Last Name cannot contain numbers or symbols(!@#$%^&)"
+              required
+            />
+            <br />
+            <input
+              name="email"
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              pattern="[a-z0-9._%+-]+@(?!(?:live|gmx|yahoo|outlook|msn|icloud|facebook|aol|zoho|yandex|lycox|inbox|myway|aim|goowy|juno|(?:hot|[gy]short|at|proton|hush|lycos|fast)?mail)\.\w+$)[a-z0-9.-]+\.[a-z]{2,4}"
+              title="Please provide only a Gmail or GitHub e-mail address"
+              required
+            />
+            <br />
+            <input
+              name="id"
+              type="text"
+              class="form-control"
+              placeholder="ID number"
+              onkeypress="return isNumberKey(event)"
+              minlength="4"
+              maxlength="15"
+              pattern="(0|[1-9][0-9]*)"
+              title="You need to enter minimum 4 and maximum 15 digits. The first digit cannot be '0'"
+              required
+            />
+            <br />
+            <input
+              name="phone"
+              type="text"
+              class="form-control"
+              placeholder="Phone number"
+              onkeypress="return isNumberKey(event)"
+              minlength="10"
+              maxlength="10"
+              pattern="(0|([3])[0-9]*)"
+              title="You need to start your phone number with the digit '3', you must enter a minimum and maximum of 10 digits."
+              required
+            />
+            <br>
+            <textarea name="mesaage" class="form-control" placeholder="Message" row="4" minlength="3" maxlength="100" required></textarea>
+            <br />
+            <input
+              type="submit"
+              class="form-control submit"
+              value="SEND MESSAGE"
+            />
+          </form>
+        </div>
         <article>
           <h3>Contact Details</h3>
           <p>
             Victor Julian Pedroza Bello <br />
             Bogotá – Cundinamarca <br />
             +57 (300) 242-41-70 <br />
-            vjpb881104@yandex.ru <br />
           </p>
         </article>
       </section>
       <div class="top-up">
-        <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+          &#8593;
+        </button>
       </div>
     </div>
     <footer></footer>
@@ -115,13 +180,13 @@
     </div>
 
     <script defer src="filejavascript.js"></script>
+    <script defer src="autoplay.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="js/bin/materialize.min.js"></script>
     <script>
       var options = {
         fullWidth: true,
         indicators: true,
-        
       };
 
       document.addEventListener("DOMContentLoaded", function () {
