@@ -1,4 +1,5 @@
-const url = "http://localhost:8888/cv_vjpb/wp-json/wp/v2/posts?per_page=50";
+const url =
+  "https://vjpb-portfolio.000webhostapp.com/wp-json/wp/v2/posts?per_page=50";
 
 fetch(url)
   .then(function (response) {
@@ -179,7 +180,8 @@ window.addEventListener("scroll", logViewport, false);
 const jobModal = document.querySelector("#myModal");
 
 function openModal(id) {
-  const jobDone = "http://localhost:8888/cv_vjpb/wp-json/wp/v2/posts/" + id;
+  const jobDone =
+    "https://vjpb-portfolio.000webhostapp.com/wp-json/wp/v2/posts/" + id;
 
   fetch(jobDone)
     .then(function (response) {
@@ -223,7 +225,6 @@ function openModal(id) {
 
 function closeModal() {
   const newModal = document.querySelector("#data-modal");
-  console.log(newModal);
   newModal.removeChild(newModal.lastChild);
   jobModal.style.display = "none";
   newModal.innerHTML = "";
@@ -239,10 +240,9 @@ window.onclick = function (event) {
 };
 
 /* ==== End modal function === */
-function isNumberKey(evt){ 
-  var charCode = (evt.which) ? evt.which : event.keyCode 
- 
-  if (charCode > 31 && (charCode < 48 || charCode > 57))
-      return false; 
-  return true; 
+function isNumberKey(evt) {
+  var charCode = evt.which ? evt.which : event.keyCode;
+
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
+  return true;
 }
