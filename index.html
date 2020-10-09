@@ -49,12 +49,13 @@
     </section>
     <div class="container">
       <section class="section-resume bar" id="resume">
-        <div class="motto">
+        <div class="motto" >
           <p>
-            My motto is: “Experience and Attention to the detail is what quality
+            My motto is: <br> “Experience and Attention to the detail is what quality
             is made of”
           </p>
           <h3 class="title">Skills</h3>
+          <div class="loader"></div>
           <div id="skills">
             <!-- Information from API -->
           </div>
@@ -63,12 +64,14 @@
         <div>
           <h3 class="title">Education</h3>
           <div id="education" class="flip-card">
+            <div class="loader2"></div>
             <!-- Information from API -->
           </div>
         </div>
         <div>
           <h3 class="title">Work experience</h3>
           <div id="work-experience" class="flip-card">
+            <div class="loader3"></div>
             <!-- Information from API -->
           </div>
         </div>
@@ -77,6 +80,7 @@
       <section class="section-portfolio" id="portfolio">
         <h3 class="title-portfolio">Check out my job</h3>
         <div id="portfolio-work-done">
+          <div class="loader4"></div>
           <!-- Information from API -->
         </div>
       </section>
@@ -117,7 +121,7 @@
               type="email"
               class="form-control"
               placeholder="Email"
-              pattern="[a-z0-9._%+-]+@(?!(?:live|gmx|yahoo|outlook|msn|icloud|facebook|aol|zoho|yandex|lycox|inbox|myway|aim|goowy|juno|(?:hot|[gy]short|at|proton|hush|lycos|fast)?mail)\.\w+$)[a-z0-9.-]+\.[a-z]{2,4}"
+              pattern="[a-zA-Z0-9]{0,}([.]?[a-zA-Z0-9]{1,})[@](gmail.com|git.com)"
               title="Please provide only a Gmail or GitHub e-mail address"
               required
             />

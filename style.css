@@ -13,7 +13,8 @@ body{
     color: #F7EBEC;
     width: 100%;
 }
-section{
+
+section .section-resume, .section-portfolio, .section-contact{
     min-height: 100vh;
 }
 /* === Style for section Navbar === */
@@ -45,7 +46,8 @@ section{
     .motto p{
         display: flex;
         justify-content: center;
-        padding: 4em 0 1rem;
+        text-align: center;
+        padding: 0 0 1rem;
     }
     .title{
         display: flex;
@@ -376,7 +378,7 @@ section{
     text-align: center;
 }
 .contact-title{
-    padding: 5em 0 4rem;
+    padding: 3em 0 4rem;
     color: #fff;
     text-transform: uppercase;
     font-size:26px;
@@ -417,6 +419,20 @@ form .submit:hover{
     background: #5eb1bf;
 }
 
+.loader, .loader2, .loader3, .loader4 {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #96031A;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
 
 /* === End style section contact === */
 

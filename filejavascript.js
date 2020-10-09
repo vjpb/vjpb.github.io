@@ -3,7 +3,13 @@ const url =
 
 fetch(url)
   .then(function (response) {
-    return response.json();
+    if(response === 404){
+      document.querySelector(".loader").style.display = 'none';
+      document.querySelector(".loader2").style.display = 'none';
+      document.querySelector(".loader3").style.display = 'none';
+      document.querySelector(".loader4").style.display = 'none';
+    }
+    return response.json();    
   })
 
   .then((apicv) => {
@@ -104,8 +110,15 @@ fetch(url)
                     </div>                                  
                 </div>`
         );
+        document.querySelector(".loader").style.display = 'none';
+        document.querySelector(".loader2").style.display = 'none';
+        document.querySelector(".loader3").style.display = 'none';
+        document.querySelector(".loader4").style.display = 'none';
+
       }
     }
+    
+
   });
 
 /* ==== Start Go top up function === */
