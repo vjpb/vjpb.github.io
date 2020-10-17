@@ -42,17 +42,17 @@
           <img src="Imagenes/oil&gas.jpg" />
           <div class="centered">
             <p class="white-text">But Engineering is my profession.</p>
-            <h2>Oil and Gras Engineer</h2>
+            <h2>Oil and Gas Engineer</h2>
           </div>
         </div>
       </div>
     </section>
     <div class="container">
       <section class="section-resume bar" id="resume">
-        <div class="motto" >
+        <div class="motto">
           <p>
-            My motto is: <br> “Experience and Attention to the detail is what quality
-            is made of”
+            My motto is: <br />
+            “Experience and Attention to the detail is what quality is made of”
           </p>
           <h3 class="title">Skills</h3>
           <div class="loader"></div>
@@ -91,9 +91,10 @@
             <h3>Contat me</h3>
             <p>I'm ready for any challenge!</p>
           </div>
-          <form id="contact-form" action="" method="post">
+          <form id="contact-form" method="post" action="">
             <input
               name="name"
+              id="name"
               type="text"
               class="form-control"
               placeholder="First Name"
@@ -106,6 +107,7 @@
             <br />
             <input
               name="lastname"
+              id="lastname"
               type="text"
               class="form-control"
               placeholder="Last Name"
@@ -118,6 +120,7 @@
             <br />
             <input
               name="email"
+              id="email"
               type="email"
               class="form-control"
               placeholder="Email"
@@ -128,6 +131,7 @@
             <br />
             <input
               name="id"
+              id="id"
               type="text"
               class="form-control"
               placeholder="ID number"
@@ -141,6 +145,7 @@
             <br />
             <input
               name="phone"
+              id="phone"
               type="text"
               class="form-control"
               placeholder="Phone number"
@@ -151,14 +156,25 @@
               title="You need to start your phone number with the digit '3', you must enter a minimum and maximum of 10 digits."
               required
             />
-            <br>
-            <textarea name="mesaage" class="form-control" placeholder="Message" row="4" minlength="3" maxlength="100" required></textarea>
+            <br />
+            <textarea
+              name="message"
+              id="message"
+              class="form-control"
+              placeholder="Message"
+              row="4"
+              minlength="3"
+              maxlength="100"
+              required
+            ></textarea>
             <br />
             <input
               type="submit"
               class="form-control submit"
               value="SEND MESSAGE"
+              onclick="SubmitMsg()"
             />
+            <div id="sendmsg"></div>
           </form>
         </div>
         <article>

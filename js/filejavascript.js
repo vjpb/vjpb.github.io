@@ -190,6 +190,9 @@ logViewport();
 window.addEventListener("scroll", logViewport, false);
 
 /* ==== End animation Bar progress View port function === */
+
+/* ==== Start modal function === */
+
 const jobModal = document.querySelector("#myModal");
 
 function openModal(id) {
@@ -253,9 +256,34 @@ window.onclick = function (event) {
 };
 
 /* ==== End modal function === */
+
+/* ==== Start only number function === */
+
 function isNumberKey(evt) {
   var charCode = evt.which ? evt.which : event.keyCode;
 
   if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
   return true;
 }
+/* ==== End only number function === */
+
+/* ==== Start submit message function === */
+
+function SubmitMsg(){
+  const name = document.querySelector("#name").value;
+  const lastname = document.querySelector("#lastname").value;
+  const email = document.querySelector("#email").value;
+  const id = document.querySelector("#id").value;
+  const phone = document.querySelector("#phone").value;
+  const message = document.querySelector("#message").value;
+
+  if (name == "" || lastname == "" || email == "" || id == "" || phone == "" || message == "" ) {
+      alert("You must complete all the fields as indicated"); 
+  }else {
+    alert("Message was successfully delivered thank you for contacting me"); 
+ 
+  
+  }
+}
+/* ==== End submit message function === */
+
