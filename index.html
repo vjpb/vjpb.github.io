@@ -6,11 +6,11 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="css/materializestyle.css" />
+    <!--Icon Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <!--Import Google Icon Font-->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="shortcut icon" href="Imagenes/favicon.ico">
     <title>Cv Victor Pedroza</title>
   </head>
   <body>
@@ -25,21 +25,21 @@
     <section id="home">
       <div class="carousel carousel-slider center">
         <div class="carousel-item white-text">
-          <img src="Imagenes/me.JPG" />
+          <img src="Imagenes/yo-sanfrancisco.jpg"/>
           <div class="centered">
             <p class="white-text">Hola!</p>
             <h2>Soy Victor Pedroza</h2>
           </div>
         </div>
         <div class="carousel-item white-text">
-          <img src="Imagenes/web-developer.jpg" />
+          <img src="Imagenes/web-developer.jpg"/>
           <div class="centered">
             <h2>I'm FrontEnd Developer.</h2>
             <p class="white-text">Web development is my passion!</p>
           </div>
         </div>
         <div class="carousel-item white-text">
-          <img src="Imagenes/oil&gas.jpg" />
+          <img src="Imagenes/oil&gas.jpg"/>
           <div class="centered">
             <p class="white-text">But Engineering is my profession.</p>
             <h2>Oil and Gas Engineer</h2>
@@ -91,7 +91,7 @@
             <h3>Contat me</h3>
             <p>I'm ready for any challenge!</p>
           </div>
-          <form id="contact-form" method="post" action="">
+          <form id="contact-form" method="post" action="contact-form.php">
             <input
               name="name"
               id="name"
@@ -100,8 +100,8 @@
               placeholder="First Name"
               minlength="3"
               maxlength="20"
-              pattern="[A-Za-z]+"
-              title="The First Name cannot contain numbers or symbols"
+              pattern="[A-Za-z _]+"
+              title="The First Name cannot contain numbers or symbols (!@#$%^&)"
               required
             />
             <br />
@@ -113,7 +113,7 @@
               placeholder="Last Name"
               minlength="3"
               maxlength="20"
-              pattern="[A-Za-z]+"
+              pattern="[A-Za-z _]+"
               title="The Last Name cannot contain numbers or symbols(!@#$%^&)"
               required
             />
@@ -174,25 +174,43 @@
               value="SEND MESSAGE"
               onclick="SubmitMsg()"
             />
-            <div id="sendmsg"></div>
           </form>
+          <div class="pdf-center">
+            <p>Download my CV in PDF format</p>
+            <a href="https://vjpb-portfolio.000webhostapp.com/wp-content/uploads/2020/10/Cv-Victor-Pedroza-WD-1.pdf" target="_blank" class="button">
+              <i class="fa fa-download"></i>
+              Download CV
+            </a>
+          </div>
+          <article>
+            <div class="contatc-details">
+              <h3>
+                Contact Details
+              </h3>
+              <p>
+                Victor Julian Pedroza Bello <br />
+                Bogotá – Cundinamarca <br />
+                +57 (300) 242-41-70 <br />
+              </p>
+            </div>
+          </article>
         </div>
-        <article>
-          <h3>Contact Details</h3>
-          <p>
-            Victor Julian Pedroza Bello <br />
-            Bogotá – Cundinamarca <br />
-            +57 (300) 242-41-70 <br />
-          </p>
-        </article>
       </section>
+
       <div class="top-up">
         <button onclick="topFunction()" id="myBtn" title="Go to top">
           &#8593;
         </button>
       </div>
     </div>
-    <footer></footer>
+    <footer>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/victorpedrozabello/" class="fa fa-linkedin"></a>
+        <a href="https://github.com/vjpb" class="fa fa-github"></a>
+        <a href="https://twitter.com/vjpb" class="fa fa-twitter"></a>
+        <a href="https://www.youtube.com/playlist?list=PLyXK7ryjGR-cJTA3HXS2P0JKeRxq7AXj4" class="fa fa-youtube"></a>
+    </div>
+    </footer>
     <div id="myModal" class="modal">
       <div id="data-modal">
         <!-- Information from API -->
