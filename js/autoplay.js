@@ -4,7 +4,7 @@ window.onload = function() {
     initCarousel('.carousel', {
       fullWidth: true,
       indicators: true,
-      autoScroll: 4000 // time in ms - custom
+      autoScroll: 8000 // time in ms - custom
     });
   }
   

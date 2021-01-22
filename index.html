@@ -22,34 +22,49 @@
         <a class="active-nav" href="#contact">Contact</a>
       </nav>
     </header>
-    <section id="home">
-      <div class="carousel carousel-slider center">
-        <div class="carousel-item white-text">
-          <img src="Imagenes/yo-sanfrancisco.jpg"/>
-          <div class="centered">
-            <p class="white-text">Hola!</p>
-            <h2>Soy Victor Pedroza</h2>
+    <section class="section-home" id="home">
+      <div class="carousel carousel-slider center"data-indicators="true">
+        <div class="carousel-fixed-item center middle-indicator">
+          <div class="left">
+              <a href="#carouselContainer" onclick="movePrevCarousel()" class="middle-indicator-text waves-effect waves-light content-indicator"><i
+                      class="material-icons left  middle-indicator-text">chevron_left</i></a>
+          </div>
+          <div class="right">
+              <a href="#carouselContainer" onclick="moveNextCarousel()" class="middle-indicator-text waves-effect waves-light content-indicator"><i
+                      class="material-icons right middle-indicator-text">chevron_right</i></a>
           </div>
         </div>
         <div class="carousel-item white-text">
-          <img src="Imagenes/web-developer.jpg"/>
+          <img id="mobile1" src="Imagenes/mobileYo.jpg"/>
+          <img id="desktop1" src="Imagenes/mySelf.jpg"/>
+          <img id="mobileHorizontal1" src="Imagenes/mobileHorizon.jpg"/>
+          <div class="centered">
+            <p class="white-text">Hello!</p>
+            <h2>I'm Victor Pedroza</h2>
+          </div>
+        </div>
+        <div class="carousel-item white-text">
+          <img id="mobile2" src="Imagenes/mobileCode.jpg"/>
+          <img id="desktop2" src="Imagenes/web-developer.jpg"/>
           <div class="centered">
             <h2>I'm FrontEnd Developer.</h2>
             <p class="white-text">Web development is my passion!</p>
           </div>
         </div>
         <div class="carousel-item white-text">
-          <img src="Imagenes/oil&gas.jpg"/>
+          <img id="mobile3" src="Imagenes/mobileOil.jpg"/>
+          <img id="desktop3" src="Imagenes/oil&gas.jpg"/>
+          <img id="mobileHorizontal3" src="Imagenes/mobileHorizon3.jpg"/>
           <div class="centered">
             <p class="white-text">But Engineering is my profession.</p>
             <h2>Oil and Gas Engineer</h2>
           </div>
-        </div>
-      </div>
+        </div>      
+      </div>     
     </section>
     <div class="container">
-      <section class="section-resume bar" id="resume">
-        <div class="motto">
+      <section class="section-resume" >
+        <div id="resume" class="motto">
           <p>
             My motto is: <br />
             “Experience and Attention to the detail is what quality is made of”
@@ -88,10 +103,10 @@
       <section id="contact">
         <div class="section-contact">
           <div class="contact-title">
-            <h3>Contat me</h3>
+            <h3>Contact me</h3>
             <p>I'm ready for any challenge!</p>
           </div>
-          <form id="contact-form" method="post" action="contact-form.php">
+          <form id="contact-form">
             <input
               name="name"
               id="name"
@@ -174,6 +189,7 @@
               value="SEND MESSAGE"
               onclick="SubmitMsg()"
             />
+            <div id="msjSent"></div>
           </form>
           <div class="pdf-center">
             <p>Download my CV in PDF format</p>
@@ -205,10 +221,10 @@
     </div>
     <footer>
       <div class="social-icons">
-        <a href="https://www.linkedin.com/in/victorpedrozabello/" class="fa fa-linkedin"></a>
-        <a href="https://github.com/vjpb" class="fa fa-github"></a>
-        <a href="https://twitter.com/vjpb" class="fa fa-twitter"></a>
-        <a href="https://www.youtube.com/playlist?list=PLyXK7ryjGR-cJTA3HXS2P0JKeRxq7AXj4" class="fa fa-youtube"></a>
+        <a href="https://www.linkedin.com/in/victorpedrozabello/" target="_blank" class="fa fa-linkedin"></a>
+        <a href="https://github.com/vjpb" target="_blank" class="fa fa-github"></a>
+        <a href="https://twitter.com/vjpb" target="_blank" class="fa fa-twitter"></a>
+        <a href="https://www.youtube.com/playlist?list=PLyXK7ryjGR-cJTA3HXS2P0JKeRxq7AXj4" target="_blank" class="fa fa-youtube"></a>
     </div>
     </footer>
     <div id="myModal" class="modal">
@@ -217,9 +233,16 @@
       </div>
     </div>
 
-    <script defer src="js/filejavascript.js"></script>
+    <script defer src="js/index.js"></script>
+    <script defer src="js/carousell_picture_size.js"></script>
+    <script defer src="js/prev_and_next_arrow.js"></script>
+    <script defer src="js/scroll_back_to_top.js"></script>
+    <script defer src="js/hightlight_navBar.js"></script>
+    <script defer src="js/bar_progress_view_port.js"></script>
+    <script defer src="js/modal.js"></script>
+    <script defer src="js/prevent_input_contact.js"></script>
     <script defer src="js/autoplay.js"></script>
-    <!-- Compiled and minified JavaScript -->
+    <!-- Compiled and minified JavaScript materialize -->
     <script src="js/materialize.min.js"></script>
     <script>
       var options = {

@@ -14,7 +14,8 @@ body {
   width: 100%;
 }
 
-section .section-resume,
+.section-home,
+.section-resume,
 .section-portfolio,
 .section-contact {
   min-height: 100vh;
@@ -47,7 +48,7 @@ header a {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 0 0 1rem;
+  padding: 2.5rem 0 1rem;
 }
 .title {
   display: flex;
@@ -56,6 +57,7 @@ header a {
   font-size: 26px;
   padding: 1em 0 2em;
 }
+
 /* Start bars progress style  */
 
 .progress-title {
@@ -72,6 +74,11 @@ header a {
   margin: 1rem auto;
   border-radius: 0.5rem;
   box-shadow: 4px 0 5px #000 inset;
+}
+@media only screen and (max-width: 900px) {
+  .progress-bars {
+    width: 80%;
+  }
 }
 .bars-level {
   display: inline-block;
@@ -128,6 +135,20 @@ header a {
   width: 250px;
   height: 270px;
   border-radius: 20px;
+}
+@media only screen and (max-width: 900px) {
+  .arrow{
+    position: absolute;
+    width: 20px !important;
+    height: 20px !important;
+    right: 5px;
+    bottom: 3px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .arrow{
+    display: none;
+  }
 }
 .flip-front,
 .flip-back {
@@ -300,7 +321,7 @@ h5 {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 50px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -314,7 +335,7 @@ h5 {
   background-color: #333;
   margin: auto;
   padding: 0;
-  width: 45%;
+  width: 35%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
@@ -333,14 +354,9 @@ h5 {
   }
 }
 
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
+@media only screen and (max-width: 900px) {
+  .modal-content {
+    width: 85%;
   }
 }
 #data-modal {
@@ -523,3 +539,37 @@ footer {
   border-radius: 27px;
 }
 /* === End style section footer === */
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v18/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+    font-size: 44px !important;
+}
+
+.middle-indicator {
+    position: absolute;
+    top: 50%;
+}
+
+.middle-indicator-text {
+    font-size: 4.2rem;
+}
+
+a.middle-indicator-text {
+    color: white !important;
+}
+
+.content-indicator {
+    width: 64px;
+    height: 64px;
+    background: none;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+
