@@ -20,7 +20,7 @@ function changeResolution() {
         document.getElementById('mobile2').style.display = 'none';
         document.getElementById('mobile3').style.display = 'none';
     }
-    if (window.innerHeight < 600) {
+    if (window.innerHeight < 600 && window.innerWidth > 400) {
         document.getElementById('mobile1').style.display = 'none';
         document.getElementById('desktop1').style.display = 'none';
         document.getElementById('mobileHorizontal1').style.display = 'block';

@@ -43,6 +43,42 @@ header a {
 
 /* === End style section Navbar === */
 
+/* ==== Sart style for arrows indicators  === */
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v18/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+  font-size: 44px !important;
+}
+
+.middle-indicator {
+  position: absolute;
+  top: 50%;
+}
+
+.middle-indicator-text {
+  font-size: 4.2rem;
+}
+
+a.middle-indicator-text {
+  color: white !important;
+}
+
+.content-indicator {
+  width: 64px;
+  height: 64px;
+  background: none;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+/* ==== End style for arrows indicators  === */
+
 /* ==== Sart style for section resume === */
 .motto p {
   display: flex;
@@ -142,7 +178,7 @@ header a {
     width: 20px !important;
     height: 20px !important;
     right: 5px;
-    bottom: 3px;
+    bottom: 125px;
   }
 }
 @media only screen and (min-width: 900px) {
@@ -540,36 +576,4 @@ footer {
 }
 /* === End style section footer === */
 
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v18/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
-}
-
-.material-icons {
-    font-size: 44px !important;
-}
-
-.middle-indicator {
-    position: absolute;
-    top: 50%;
-}
-
-.middle-indicator-text {
-    font-size: 4.2rem;
-}
-
-a.middle-indicator-text {
-    color: white !important;
-}
-
-.content-indicator {
-    width: 64px;
-    height: 64px;
-    background: none;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    border-radius: 50px;
-}
 

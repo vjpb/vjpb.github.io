@@ -3226,7 +3226,11 @@ th {
 .right {
   float: right !important;
 }
-
+@media only screen and (max-width: 900px) {
+  .left, .right{
+    display: none;
+  }
+}
 .no-select {
   user-select: none;
 }
@@ -3261,11 +3265,13 @@ th {
   transform-style: preserve-3d;
   transform-origin: 0% 50%;
 }
-@media only screen and (max-width: 900px) {
-  .left, .right{
-    display: none;
+@media only screen and (max-width: 767px) {
+  .carousel {
+    min-height: 100vh;
   }
 }
+
+
 
 .carousel.carousel-slider .carousel-fixed-item {
   position: absolute;
@@ -3296,18 +3302,20 @@ th {
 @media only screen and (max-width: 900px) {
   .carousel.carousel-slider .carousel-item .centered {
     position: absolute;
-    top: 70%;
-    left: 33%;
-    transform: translate(-50%, -50%);
-  }
-}@media only screen and (max-height: 600px) {
-  .carousel.carousel-slider .carousel-item .centered {
-    position: absolute;
-    top: 57%;
-    left: 24%;
+    top: 66%;
+    left: 34%;;
     transform: translate(-50%, -50%);
   }
 }
+@media only screen and (max-height: 500px) {
+  .carousel.carousel-slider .carousel-item .centered {
+    position: absolute;
+    top: 49%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .carousel.carousel-slider .carousel-item h2 {
   font-size: 44px;
   font-weight: 500;
@@ -3341,12 +3349,8 @@ th {
   width: 100%;
   position: relative;
 }
-@media only screen and (max-width: 900px) {
-  .carousel .carousel-item > img {
-    width: 100%;
 
-  }
-}
+
 .carousel .indicators {
   position: absolute;
   text-align: center;
