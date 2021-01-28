@@ -31,6 +31,13 @@ body {
   transition: top 0.6s;
   z-index: 1;
 }
+@media only screen and (max-width: 700px){
+  #navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
 header a {
   padding: 10px;
   color: #f7ebec;
@@ -40,7 +47,12 @@ header a {
   color: red;
   padding: 11px;
 }
+.full-nav-left{
 
+}
+.full-nav-right{
+  
+}
 /* === End style section Navbar === */
 
 /* ==== Sart style for arrows indicators  === */
@@ -101,7 +113,8 @@ a.middle-indicator-text {
   justify-content: space-around;
 }
 .bar-porcent {
-  margin: 6px 0;
+  margin: 9px 0;
+  font-size: 10px;
 }
 .progress-bars {
   background: #96031a;
@@ -109,7 +122,7 @@ a.middle-indicator-text {
   width: 50%;
   margin: 1rem auto;
   border-radius: 0.5rem;
-  box-shadow: 4px 0 5px #000 inset;
+  box-shadow: 1px 0 5px #000 inset;
 }
 @media only screen and (max-width: 900px) {
   .progress-bars {
@@ -122,12 +135,12 @@ a.middle-indicator-text {
   border-radius: 3px;
   color: black;
   text-align: center;
-  box-shadow: 4px 0 5px #000 inset;
-  transition: width 0.4s ease-in-out;
+  box-shadow: 1px 0 5px #000 inset;
+  transition: width 0.9s ease-in-out;
   background: #ccc;
 }
 .animation-progress .animation-bars {
-  animation: time-progress 2s;
+  animation: time-progress 10s;
 }
 @keyframes time-progress {
   0% {
@@ -136,7 +149,7 @@ a.middle-indicator-text {
 }
 .bars-level:hover {
   box-shadow: 4px 0 5px #000 inset;
-  background: #faa916;
+  background: #5eb1bf;
 }
 /*  End bars progress style  */
 
@@ -203,7 +216,7 @@ a.middle-indicator-text {
 .flip-front .centered-text {
   position: absolute;
   text-align: center;
-  width: 100%;
+  width: 95%;
   top: 13%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -252,7 +265,6 @@ a.middle-indicator-text {
   align-items: center;
   flex-wrap: wrap;
   border-bottom: 2px solid #96031a;
-  box-shadow: 0 9px 6px #96031a;
   position: relative;
   overflow: hidden;
 }
@@ -357,7 +369,6 @@ h5 {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 50px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */

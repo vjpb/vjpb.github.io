@@ -42,6 +42,7 @@ function openModal(id) {
             </div>`
         );
         jobModal.style.display = "block";
+        jobModal.style.display = "flex";
       });
   }
 
