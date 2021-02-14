@@ -4,229 +4,275 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/animations.css" />
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="css/materializestyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/materializestyle.css" />
     <!--Icon Font awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link rel="shortcut icon" href="Imagenes/favicon.ico">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="images/favicon.ico" />
     <title>Cv Victor Pedroza</title>
   </head>
   <body>
     <header>
-      <nav id="navbar">
-        <a class="active-nav full-nav-left" href="#home">Home</a>
-        <a class="active-nav" href="#resume">Resume</a>
-        <a class="active-nav" href="#portfolio">Portfolio</a>
-        <a class="active-nav full-nav-right" href="#contact">Contact</a>
+      <nav>
+        <a class="link-nav" href="#home">Home</a>
+        <a class="link-nav" href="#resume">Resume</a>
+        <a class="link-nav" href="#portfolio">Portfolio</a>
+        <a class="link-nav" href="#contact">Contact</a>
       </nav>
     </header>
-    <section class="section-home" id="home">
-      <div class="carousel carousel-slider center"data-indicators="true">
+    <section id="home">
+      <div class="carousel carousel-slider center" data-indicators="true">
         <div class="carousel-fixed-item center middle-indicator">
           <div class="left">
-              <a href="#carouselContainer" onclick="movePrevCarousel()" class="middle-indicator-text waves-effect waves-light content-indicator"><i
-                      class="material-icons left  middle-indicator-text">chevron_left</i></a>
-          </div>
-          <div class="right">
-              <a href="#carouselContainer" onclick="moveNextCarousel()" class="middle-indicator-text waves-effect waves-light content-indicator"><i
-                      class="material-icons right middle-indicator-text">chevron_right</i></a>
-          </div>
-        </div>
-        <div class="carousel-item white-text">
-          <img id="mobile1" src="Imagenes/mobileYo.jpg"/>
-          <img id="desktop1" src="Imagenes/mySelf.jpg"/>
-          <img id="mobileHorizontal1" src="Imagenes/mobileHorizon.jpg"/>
-          <div class="centered">
-            <p class="white-text">Hello!</p>
-            <h2>I'm Victor Pedroza</h2>
-          </div>
-        </div>
-        <div class="carousel-item white-text">
-          <img id="mobile2" src="Imagenes/mobileCode.jpg"/>
-          <img id="desktop2" src="Imagenes/web-developer.jpg"/>
-          <div class="centered">
-            <h2>I'm FrontEnd Developer.</h2>
-            <p class="white-text">Web development is my passion!</p>
-          </div>
-        </div>
-        <div class="carousel-item white-text">
-          <img id="mobile3" src="Imagenes/mobileOil.jpg"/>
-          <img id="desktop3" src="Imagenes/oil&gas.jpg"/>
-          <img id="mobileHorizontal3" src="Imagenes/mobileHorizon3.jpg"/>
-          <div class="centered">
-            <p class="white-text">But Engineering is my profession.</p>
-            <h2>Oil and Gas Engineer</h2>
-          </div>
-        </div>      
-      </div>     
-    </section>
-    <div class="container">
-      <section class="section-resume" >
-        <div id="resume" class="motto">
-          <p>
-            My motto is: <br />
-            “Experience and Attention to the detail is what quality is made of”
-          </p>
-          <h3 class="title">Skills</h3>
-          <div class="loader"></div>
-          <div id="skills" class="animation-progress">
-            <!-- Information from API -->
-          </div>
-          <br />
-        </div>
-        <div>
-          <h3 class="title">Education</h3>
-          <div id="education" class="flip-card">
-            <div class="loader2"></div>
-            <!-- Information from API -->
-          </div>
-        </div>
-        <div>
-          <h3 class="title">Work experience</h3>
-          <div id="work-experience" class="flip-card">
-            <div class="loader3"></div>
-            <!-- Information from API -->
-          </div>
-        </div>
-      </section>
-
-      <section class="section-portfolio" id="portfolio">
-        <h3 class="title-portfolio">Check out my job</h3>
-        <div id="portfolio-work-done">
-          <div class="loader4"></div>
-          <!-- Information from API -->
-        </div>
-      </section>
-
-      <section id="contact">
-        <div class="section-contact">
-          <div class="contact-title">
-            <h3>Contact me</h3>
-            <p>I'm ready for any challenge!</p>
-          </div>
-          <form id="contact-form">
-            <input
-              name="name"
-              id="name"
-              type="text"
-              class="form-control"
-              placeholder="First Name"
-              minlength="3"
-              maxlength="20"
-              pattern="[A-Za-z _]+"
-              title="The First Name cannot contain numbers or symbols (!@#$%^&)"
-              required
-            />
-            <br />
-            <input
-              name="lastname"
-              id="lastname"
-              type="text"
-              class="form-control"
-              placeholder="Last Name"
-              minlength="3"
-              maxlength="20"
-              pattern="[A-Za-z _]+"
-              title="The Last Name cannot contain numbers or symbols(!@#$%^&)"
-              required
-            />
-            <br />
-            <input
-              name="email"
-              id="email"
-              type="email"
-              class="form-control"
-              placeholder="Email"
-              pattern="[a-zA-Z0-9]{0,}([.]?[a-zA-Z0-9]{1,})[@](gmail.com|git.com)"
-              title="Please provide only a Gmail or GitHub e-mail address"
-              required
-            />
-            <br />
-            <input
-              name="id"
-              id="id"
-              type="text"
-              class="form-control"
-              placeholder="ID number"
-              onkeypress="return isNumberKey(event)"
-              minlength="4"
-              maxlength="15"
-              pattern="(0|[1-9][0-9]*)"
-              title="You need to enter minimum 4 and maximum 15 digits. The first digit cannot be '0'"
-              required
-            />
-            <br />
-            <input
-              name="phone"
-              id="phone"
-              type="text"
-              class="form-control"
-              placeholder="Phone number"
-              onkeypress="return isNumberKey(event)"
-              minlength="10"
-              maxlength="10"
-              pattern="(0|([3])[0-9]*)"
-              title="You need to start your phone number with the digit '3', you must enter a minimum and maximum of 10 digits."
-              required
-            />
-            <br />
-            <textarea
-              name="message"
-              id="message"
-              class="form-control"
-              placeholder="Message"
-              row="4"
-              minlength="3"
-              maxlength="100"
-              required
-            ></textarea>
-            <br />
-            <input
-              type="submit"
-              class="form-control submit"
-              value="SEND MESSAGE"
-              onclick="SubmitMsg()"
-            />
-            <div id="msjSent"></div>
-          </form>
-          <div class="pdf-center">
-            <p>Download my CV in PDF format</p>
-            <a href="https://vjpb-portfolio.000webhostapp.com/wp-content/uploads/2020/10/Cv-Victor-Pedroza-WD-1.pdf" target="_blank" class="button">
-              <i class="fa fa-download"></i>
-              Download CV
+            <a href="#carouselContainer"
+              onclick="movePrevCarousel()"
+              class="middle-indicator-text waves-effect waves-light content-indicator">
+              <i class="material-icons left middle-indicator-text">
+                chevron_left
+              </i>
             </a>
           </div>
-          <article>
-            <div class="contatc-details">
-              <h3>
-                Contact Details
-              </h3>
-              <p>
-                Victor Julian Pedroza Bello <br />
-                Bogotá – Cundinamarca <br />
-                +57 (300) 242-41-70 <br />
-              </p>
-            </div>
-          </article>
+          <div class="right">
+            <a href="#carouselContainer"
+              onclick="moveNextCarousel()"
+              class="middle-indicator-text waves-effect waves-light content-indicator">
+              <i class="material-icons right middle-indicator-text">
+                chevron_right
+              </i>
+            </a>
+          </div>
         </div>
-      </section>
-
-      <div class="top-up">
-        <button onclick="topFunction()" id="myBtn" title="Go to top">
-          &#8593;
-        </button>
+        <div class="carousel-item white-text">
+          <img id="mobile1" src="images/mobileYo.jpg" />
+          <img id="desktop1" src="images/mySelf.jpg" />
+          <img id="mobileHorizontal1" src="images/mobileHorizon.jpg" />
+          <div class="banner">
+            <p>
+              Hello!
+            </p>
+            <h2>
+              I'm Victor Pedroza
+            </h2>
+          </div>
+        </div>
+        <div class="carousel-item white-text">
+          <img id="mobile2" src="images/mobileCode.jpg" />
+          <img id="desktop2" src="images/web-developer.jpg" />
+          <div class="banner">
+            <h2>
+              I'm FrontEnd Developer
+            </h2>
+            <p>
+              Web development is my passion!
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item white-text">
+          <img id="mobile3" src="images/mobileOil.jpg" />
+          <img id="desktop3" src="images/oil&gas.jpg" />
+          <img id="mobileHorizontal3" src="images/mobileHorizon3.jpg" />
+          <div class="banner">
+            <p>
+              But Engineering is my profession
+            </p>
+            <h2>
+              Oil and Gas Engineer
+            </h2>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+    
+    <section id="resume">
+      <p class="text-motto">
+        My motto is: 
+        <br />
+        “Experience and Attention to the detail is what quality is made of”
+      </p>
+      <h3 class="title">
+        Skills
+      </h3>
+      <div id="skills" class="animation-progress">
+        <div class="loader-skills"></div>
+        <!-- Information from API -->
+      </div>
+      <br />
+        <h3 class="title">
+          Education
+        </h3>
+        <div id="education" class="flip-card">
+          <div class="loader-education"></div>
+          <!-- Information from API -->
+        </div>
+        <h3 class="title">
+          Work experience
+        </h3>
+        <div id="work-experience" class="flip-card">
+          <div class="loader-work-experience"></div>
+          <!-- Information from API -->
+        </div>
+    </section>
+
+    <section id="portfolio">
+      <h3 class="title-portfolio">
+        Check out my job
+      </h3>
+      <div id="portfolio-work-done">
+        <div class="loader-portfolio-work-done"></div>
+        <!-- Information from API -->
+      </div>
+    </section>
+    
+    <section id="contact">
+      <div>
+        <div class="contact-title">
+          <h3>
+            Contact me
+          </h3>
+          <p>
+            I'm ready for any challenge!
+          </p>
+        </div>
+        <form id="contact-form">
+          <input
+            name="name"
+            id="name"
+            type="text"
+            class="form-control"
+            placeholder="First Name"
+            minlength="3"
+            maxlength="20"
+            pattern="[A-Za-z _]+"
+            title="The First Name cannot contain numbers or symbols (!@#$%^&)"
+            required
+          />
+          <br />
+          <input
+            name="lastname"
+            id="lastname"
+            type="text"
+            class="form-control"
+            placeholder="Last Name"
+            minlength="3"
+            maxlength="20"
+            pattern="[A-Za-z _]+"
+            title="The Last Name cannot contain numbers or symbols(!@#$%^&)"
+            required
+          />
+          <br />
+          <input
+            name="email"
+            id="email"
+            type="email"
+            class="form-control"
+            placeholder="Email"
+            pattern="[a-zA-Z0-9]{0,}([.]?[a-zA-Z0-9]{1,})[@](gmail.com|git.com)"
+            title="Please provide only a Gmail or GitHub e-mail address"
+            required
+          />
+          <br />
+          <input
+            name="id"
+            id="id"
+            type="text"
+            class="form-control"
+            placeholder="ID number"
+            onkeypress="return isNumberKey(event)"
+            minlength="4"
+            maxlength="15"
+            pattern="(0|[1-9][0-9]*)"
+            title="You need to enter minimum 4 and maximum 15 digits. The first digit cannot be '0'"
+            required
+          />
+          <br />
+          <input
+            name="phone"
+            id="phone"
+            type="text"
+            class="form-control"
+            placeholder="Phone number"
+            onkeypress="return isNumberKey(event)"
+            minlength="10"
+            maxlength="10"
+            pattern="(0|([3])[0-9]*)"
+            title="You need to start your phone number with the digit '3', you must enter a minimum and maximum of 10 digits."
+            required
+          />
+          <br />
+          <textarea
+            name="message"
+            id="message"
+            class="form-control"
+            placeholder="Message"
+            row="4"
+            minlength="3"
+            maxlength="100"
+            required>
+          </textarea>
+          <br />
+          <input
+            type="submit"
+            class="form-control submit"
+            value="SEND MESSAGE"
+            onclick="SubmitMsg()"
+          />
+          <div id="msjSent"></div>
+        </form>
+        <div class="pdf-center">
+          <p>
+            Download my CV in PDF format
+          </p>
+          <a href="https://vjpb-portfolio.000webhostapp.com/wp-content/uploads/2020/10/Cv-Victor-Pedroza-WD-1.pdf"
+            target="_blank"
+            class="button">
+            <i class="fa fa-download"></i>
+            Download CV
+          </a>
+        </div>
+        <article>
+          <div class="contatc-details">
+            <h3>Contact Details</h3>
+            <p>
+              Victor Julian Pedroza Bello <br />
+              Bogotá – Cundinamarca <br />
+              +57 (300) 242-41-70 <br />
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <footer>
       <div class="social-icons">
-        <a href="https://www.linkedin.com/in/victorpedrozabello/" target="_blank" class="fa fa-linkedin"></a>
-        <a href="https://github.com/vjpb" target="_blank" class="fa fa-github"></a>
-        <a href="https://twitter.com/vjpb" target="_blank" class="fa fa-twitter"></a>
-        <a href="https://www.youtube.com/playlist?list=PLyXK7ryjGR-cJTA3HXS2P0JKeRxq7AXj4" target="_blank" class="fa fa-youtube"></a>
-    </div>
+        <a href="https://www.linkedin.com/in/victorpedrozabello/"
+          target="_blank"
+          class="fa fa-linkedin">
+        </a>
+        <a href="https://github.com/vjpb"
+          target="_blank"
+          class="fa fa-github">
+        </a>
+        <a href="https://twitter.com/vjpb"
+          target="_blank"
+          class="fa fa-twitter">
+        </a>
+        <a href="https://www.youtube.com/playlist?list=PLyXK7ryjGR-cJTA3HXS2P0JKeRxq7AXj4"
+          target="_blank"
+          class="fa fa-youtube">
+        </a>
+      </div>
     </footer>
+    <div class="top-up">
+      <button onclick="topFunction()" id="myBtn" title="Go to top">
+        &#8593;
+      </button>
+    </div>
     <div id="myModal" class="modal">
       <div id="data-modal">
         <!-- Information from API -->
@@ -243,16 +289,5 @@
     <script defer src="js/autoplay.js"></script>
     <!-- Compiled and minified JavaScript materialize -->
     <script src="js/materialize.min.js"></script>
-    <script>
-      var options = {
-        fullWidth: true,
-        indicators: true,
-      };
-
-      document.addEventListener("DOMContentLoaded", function () {
-        var elems = document.querySelectorAll(".carousel");
-        var instances = M.Carousel.init(elems, options);
-      });
-    </script>
   </body>
 </html>

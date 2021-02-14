@@ -2168,7 +2168,6 @@ article,
 aside,
 footer,
 header,
-nav,
 section {
   display: block;
 }
@@ -3292,7 +3291,7 @@ th {
   top: 0;
   left: 0;
 }
-.carousel.carousel-slider .carousel-item .centered {
+.banner {
   color: #fff ;
   position: absolute;
   top: 78%;
@@ -3300,7 +3299,7 @@ th {
   transform: translate(-50%, -50%);
 }
 @media only screen and (max-width: 900px) {
-  .carousel.carousel-slider .carousel-item .centered {
+  .banner {
     position: absolute;
     top: 66%;
     left: 34%;;
@@ -3308,7 +3307,7 @@ th {
   }
 }
 @media only screen and (max-height: 500px) {
-  .carousel.carousel-slider .carousel-item .centered {
+  .banner {
     position: absolute;
     top: 49%;
     left: 27%;
@@ -3316,23 +3315,23 @@ th {
   }
 }
 
-.carousel.carousel-slider .carousel-item h2 {
+.banner h2 {
   font-size: 44px;
   font-weight: 500;
   line-height: 32px;
 }
 @media only screen and (max-width: 900px) {
-  .carousel.carousel-slider .carousel-item h2 {
+  .banner h2 {
     font-size: 24px;
     font-weight: 500;
     line-height: 32px;
   }
 }
-.carousel.carousel-slider .carousel-item p {
+.banner p {
   font-size: 28px;
 }
 @media only screen and (max-width: 900px) {
-  .carousel.carousel-slider .carousel-item p {
+  .banner p {
     font-size: 20px;
   }
 }
