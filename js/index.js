@@ -46,7 +46,7 @@ fetch(url)
           `<div class="flip">
           <div class="flip-inner">
             <div class="flip-front">
-              <img src="images/study.jpg" class="studyIcon" alt="Study icon">
+              <img src="images/education.jpg" class="studyIcon" alt="Study icon">
               <img src="images/rotationCircle.png" class="arrow" alt="arrow icon">
               <div>
                 <p class="title-university-text">
@@ -59,7 +59,7 @@ fetch(url)
             </div>
             <div class="flip-back">
               <div>
-                <p class="start-study-data-text"> 
+                <p class="start-study-data-text">
                   ${userData.start_study}
                     - 
                   ${userData.graduation_date}

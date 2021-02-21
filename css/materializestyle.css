@@ -3259,18 +3259,11 @@ th {
   overflow: hidden;
   position: relative;
   width: 100%;
-  max-height: 100vh;
+  min-height: 100vh;
   perspective: 500px;
   transform-style: preserve-3d;
   transform-origin: 0% 50%;
 }
-@media only screen and (max-width: 767px) {
-  .carousel {
-    min-height: 100vh;
-  }
-}
-
-
 
 .carousel.carousel-slider .carousel-fixed-item {
   position: absolute;
@@ -3284,7 +3277,6 @@ th {
 }
 .carousel.carousel-slider .carousel-item {
   width: 100%;
-  margin: 100px 0 0 0;
   height: 100%;
   min-height: 300px;
   position: absolute;
@@ -3294,14 +3286,14 @@ th {
 .banner {
   color: #fff ;
   position: absolute;
-  top: 78%;
+  top:90%;
   left: 26%;
   transform: translate(-50%, -50%);
 }
 @media only screen and (max-width: 900px) {
   .banner {
     position: absolute;
-    top: 66%;
+    top: 81%;
     left: 34%;;
     transform: translate(-50%, -50%);
   }
@@ -3309,7 +3301,7 @@ th {
 @media only screen and (max-height: 500px) {
   .banner {
     position: absolute;
-    top: 49%;
+    top: 80%;
     left: 27%;
     transform: translate(-50%, -50%);
   }
@@ -3343,12 +3335,6 @@ th {
   top: 0;
   left: 0;
 }
-.carousel .carousel-item > img {
-  bottom: 62px;
-  width: 100%;
-  position: relative;
-}
-
 
 .carousel .indicators {
   position: absolute;

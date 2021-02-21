@@ -1,4 +1,3 @@
-
     function moveNextCarousel() {
         const elems = document.querySelector('.carousel.carousel-slider');
         const moveRight = M.Carousel.getInstance(elems);

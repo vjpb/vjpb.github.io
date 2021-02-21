@@ -24,7 +24,7 @@ function SubmitMsg() {
   } else{
     sent.insertAdjacentHTML(
       "beforeEnd",
-      `<p>Your message was sent. Thank you!</p>` 
+      `<p>Your message was sent. Thank you!</p>`
     );
   };
 }

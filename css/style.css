@@ -55,6 +55,34 @@ header a {
 
 /* === End style section nav === */
 
+/* ==== Sart slider pictures  === */
+
+.slider-picture{
+  background-image: url("../images/web-developer.jpg"); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}.slider-picture-code{
+  background-image: url("../images/code.jpg"); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.slider-picture-profession{
+  background-image: url("../images/profession.jpg"); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ==== End slider pictures  === */
+
 /* ==== Sart style for arrows indicators  === */
 
 @font-face {
