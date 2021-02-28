@@ -134,91 +134,28 @@
             I'm ready for any challenge!
           </p>
         </div>
-        <form id="contact-form">
-          <input
-            name="name"
-            id="name"
-            type="text"
-            class="form-control"
-            placeholder="First Name"
-            minlength="3"
-            maxlength="20"
-            pattern="[A-Za-z _]+"
-            title="The First Name cannot contain numbers or symbols (!@#$%^&)"
-            required
-          />
-          <br />
-          <input
-            name="lastname"
-            id="lastname"
-            type="text"
-            class="form-control"
-            placeholder="Last Name"
-            minlength="3"
-            maxlength="20"
-            pattern="[A-Za-z _]+"
-            title="The Last Name cannot contain numbers or symbols(!@#$%^&)"
-            required
-          />
-          <br />
-          <input
-            name="email"
-            id="email"
-            type="email"
-            class="form-control"
-            placeholder="Email"
-            pattern="[a-zA-Z0-9]{0,}([.]?[a-zA-Z0-9]{1,})[@](gmail.com|git.com)"
-            title="Please provide only a Gmail or GitHub e-mail address"
-            required
-          />
-          <br />
-          <input
-            name="id"
-            id="id"
-            type="text"
-            class="form-control"
-            placeholder="ID number"
-            onkeypress="return isNumberKey(event)"
-            minlength="4"
-            maxlength="15"
-            pattern="(0|[1-9][0-9]*)"
-            title="You need to enter minimum 4 and maximum 15 digits. The first digit cannot be '0'"
-            required
-          />
-          <br />
-          <input
-            name="phone"
-            id="phone"
-            type="text"
-            class="form-control"
-            placeholder="Phone number"
-            onkeypress="return isNumberKey(event)"
-            minlength="10"
-            maxlength="10"
-            pattern="(0|([3])[0-9]*)"
-            title="You need to start your phone number with the digit '3', you must enter a minimum and maximum of 10 digits."
-            required
-          />
-          <br />
-          <textarea
-            name="message"
-            id="message"
-            class="form-control"
-            placeholder="Message"
-            row="4"
-            minlength="3"
-            maxlength="100"
-            required>
-          </textarea>
-          <br />
-          <input
-            type="submit"
-            class="form-control submit"
-            value="SEND MESSAGE"
-            onclick="SubmitMsg()"
-          />
-          <div id="msjSent"></div>
+        <form id="contact-form" onsubmit="return validForm()">
+            <input
+              id="name" name="name" type="text" class="form-control" placeholder=" Name"
+              title="The name cannot contain numbers or symbols (!@#$%^&)" />
+            <span class="error-name"></span>
+            <br />
+            <input
+              id="email" name="email" type="email" class="form-control" placeholder="Email"
+              title="Please provide only a gmail, yahoo, hotmail(outlook), yandex, or icloud e-mail address" />
+            <span class="error-email"></span>
+            <br />
+            <textarea id="message" name="message" class="form-control" placeholder="Message"  minlength="3" maxlength="100"></textarea>
+            <span class="error-message"></span>
+            <br />
+            <input
+              type="submit"
+              class="form-control submit"
+              value="SEND MESSAGE"
+            />
+            <div id="msjSent"></div>
         </form>
+        
         <div class="pdf-center">
           <p>
             Download my CV in PDF format
@@ -236,8 +173,13 @@
             <p>
               Victor Julian Pedroza Bello <br />
               Bogotá – Cundinamarca <br />
-              +57 (300) 242-41-70 <br />
+              Write me to Whats App <br />
             </p>
+            <a href="https://api.whatsapp.com/send/?phone=573002424170"
+            target="_blank"
+            <i class="fa fa-whatsapp"></i>
+            </a>
+              
           </div>
         </article>
       </div>

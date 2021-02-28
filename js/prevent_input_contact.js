@@ -1,31 +1,62 @@
-/* ==== Start only number function === */
+function validForm() {
+  const name = document.querySelector("#name").value,
+        email = document.querySelector("#email").value,
+        message = document.querySelector("#message").value,
+        pattName = /[A-Za-z _]+/,
+        pattEmail = /[a-zA-Z0-9]{0,}([.]?[a-zA-Z0-9]{1,})[@](gmail.com|yahoo.com|hotmail.com|yandex.ru|icloud.com|outlook.com)/;
+        isValidName = pattName.test(name);
+        isValidEmail = pattEmail.test(email);
+  let errorName = document.querySelector(".error-name");
+  if (!isValidName) {
+    if(name === ""){
+      errorName.innerHTML = "";
+      errorName.classList.add("name-has-error");
+      errorName.insertAdjacentHTML("afterbegin", "Field cannot be empty");
+    }else{
+      errorName.innerHTML = "";
+      errorName.classList.add("name-has-error");
+      errorName.insertAdjacentHTML("afterbegin", "The name cannot contain numbers or symbols (!@#$%^&)");
+    }
+   return false; 
+  }else{
+    errorName.innerHTML = "";
+  }
 
-function isNumberKey(evt) {
-  const charCode = evt.which ? evt.which : evt.keyCode;
+  let errorEmail = document.querySelector(".error-email");
+  if (!isValidEmail) {
+    if(email === ""){
+      errorEmail.innerHTML = "";
+      errorEmail.classList.add("email-has-error");
+      errorEmail.insertAdjacentHTML("afterbegin", "Field cannot be empty");
 
-  if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
-  return true;
-}
-/* ==== End only number function === */
+    }else{
+      errorEmail.innerHTML = "";
+      errorEmail.classList.add("email-has-error");
+      errorEmail.insertAdjacentHTML("afterbegin", "Please provide only a gmail, yahoo, hotmail(outlook), yandex, or icloud e-mail address");
+    }
+    return false;
+  }else{
+    errorEmail.innerHTML = "";
+  }
 
-/* ==== Start submit message function === */
+  let errorMessage = document.querySelector(".error-message");
+  if(message === ""){
+    errorMessage.innerHTML = "";
+    errorMessage.classList.add("message-has-error");
+    errorMessage.insertAdjacentHTML("afterbegin", "Field cannot be empty");
+   return false; 
+  }else{
+    errorMessage.innerHTML = "";
+  }
+}; 
 
-function SubmitMsg() {
-  const name = document.querySelector("#name").value;
-  const lastname = document.querySelector("#lastname").value;
-  const email = document.querySelector("#email").value;
-  const id = document.querySelector("#id").value;
-  const phone = document.querySelector("#phone").value;
-  const message = document.querySelector("#message").value;
-  const sent = document.querySelector("#msjSent");
-  if (
-    name == "" || lastname == "" || email == "" || id == "" || phone == "" || message == "") {
-    alert("You must complete all the fields as indicated");
-  } else{
-    sent.insertAdjacentHTML(
-      "beforeEnd",
-      `<p>Your message was sent. Thank you!</p>`
-    );
-  };
-}
-/* ==== End submit message function === */
+    
+  
+document.querySelector('#message').onkeypress = function validate(e) {
+
+  if (String.fromCharCode(e.keyCode).match(/[\w, .'-]/) == null) {
+
+    e.preventDefault();
+
+  }
+};
