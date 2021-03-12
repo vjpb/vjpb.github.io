@@ -1,48 +1,48 @@
 // APIREST Wordpress
 const url =
-  "https://vjpb-portfolio.000webhostapp.com/wp-json/wp/v2/posts?per_page=50";
+  'https://vjpb-portfolio.000webhostapp.com/wp-json/wp/v2/posts?per_page=50';
 
 fetch(url)
   .then(function (response) {
     if (response === 404) {
       document.querySelectorAll(
-        ".loader-skills, .loader-education, .loader-work-experience, .loader-portfolio-work-done"
-      ).style.display = "block";
+        '.loader-skills, .loader-education, .loader-work-experience, .loader-portfolio-work-done'
+      ).style.display = 'block';
     }
     return response.json();
   })
 
   .then((apicv) => {
-    const skill = document.querySelector("#skills");
-    const education = document.querySelector("#education");
-    const work_experience = document.querySelector("#work-experience");
-    const portfolio = document.querySelector("#portfolio-work-done");
+    const skill = document.querySelector('#skills');
+    const education = document.querySelector('#education');
+    const work_experience = document.querySelector('#work-experience');
+    const portfolio = document.querySelector('#portfolio-work-done');
 
     for (i = 0; i < apicv.length; i++) {
       userData = apicv[i];
       // Se espera que la categoria sea Skills
       if (apicv[i].categories[0] === 3) {
         skill.insertAdjacentHTML(
-          "beforeEnd",
+          'beforeEnd',
           `<h4 class="progress-title">
             ${userData.title.rendered}
           </h4>
           <div class="skills">
             <div class="progress-bars">
               <div class="bars-level animation-bars"  style="width:${userData.porcent}%">
-                <div class="bar-porcent">
+                <div class="bar-percent">
                   ${userData.porcent}%
                 </div>
               </div>
             </div>
           </div>`
         );
-        document.querySelector(".loader-skills").style.display = "none";
+        document.querySelector('.loader-skills').style.display = 'none';
       }
       // Se espera que la categoria sea Education
       if (apicv[i].categories[0] === 2) {
         education.insertAdjacentHTML(
-          "beforeEnd",
+          'beforeEnd',
           `<div class="flip">
           <div class="flip-inner">
             <div class="flip-front">
@@ -72,12 +72,12 @@ fetch(url)
           </div>
         </div>`
         );
-        document.querySelector(".loader-education").style.display = "none";
+        document.querySelector('.loader-education').style.display = 'none';
       }
       // Se espera que la categoria sea Work Experience
       if (apicv[i].categories[0] === 6) {
         work_experience.insertAdjacentHTML(
-          "beforeEnd",
+          'beforeEnd',
           `<div class="work-card-items">
           <h3>
             ${userData.name_work}
@@ -98,13 +98,13 @@ fetch(url)
           </div>
         </div>`
         );
-        document.querySelector(".loader-work-experience").style.display =
-          "none";
+        document.querySelector('.loader-work-experience').style.display =
+          'none';
       }
       // Se espera que la categoria sea Portfolio (My job)
       if (apicv[i].categories[0] === 10) {
         portfolio.insertAdjacentHTML(
-          "beforeEnd",
+          'beforeEnd',
           `<div  class="portfolio-pictures">
           <div id="modalPicture" onclick="openModal(${userData.id})" class="click-picture">
             <img src="${userData.picture_1}" alt="job done">
@@ -119,8 +119,8 @@ fetch(url)
           </div>
         </div>`
         );
-        document.querySelector(".loader-portfolio-work-done").style.display =
-          "none";
+        document.querySelector('.loader-portfolio-work-done').style.display =
+          'none';
       }
     }
   });

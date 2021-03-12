@@ -1,3 +1,6 @@
+@import url("animations.css");
+@import url("materializestyle.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -8,14 +11,18 @@
 html {
   scroll-behavior: smooth;
 }
-:root{
+:root {
   --white: #f7ebec;
   --red: #96031a;
-  --black:#000000;
-  --dark-gray:#262626;
+  --black: #000000;
+  --dark-gray: #262626;
   --light-black: #333;
   --turquoise: #5eb1bf;
   --green: #25d366;
+  --blue: #007bb5;
+  --light-blue: #55acee;
+  --portland-orange: #f1502f;
+  --yellow:#f6b500;
 }
 body {
   background-color: var(--dark-gray);
@@ -39,7 +46,7 @@ nav {
 @media only screen and (max-width: 700px) {
   nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0;
   }
 }
@@ -58,30 +65,22 @@ header a {
 
 /* ==== Sart slider pictures  === */
 
-.slider-picture{
-  background-image: url("../images/web-developer.jpg"); 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-}.slider-picture-code{
-  background-image: url("../images/code.jpg"); 
+.slider-picture {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
   height: 100vh;
 }
-.slider-picture-profession{
-  background-image: url("../images/profession.jpg"); 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
+.slider-picture-developer {
+  background-image: url("../images/web-developer.jpg");
 }
-
+.slider-picture-code {
+  background-image: url("../images/code.jpg");
+}
+.slider-picture-profession {
+  background-image: url("../images/profession.jpg");
+}
 /* ==== End slider pictures  === */
 
 /* ==== Sart style for arrows indicators  === */
@@ -123,7 +122,7 @@ a.middle-indicator-text {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 2.5rem 0 1rem;
+  padding: 40px 0 16px;
 }
 .title {
   display: flex;
@@ -139,16 +138,16 @@ a.middle-indicator-text {
   display: flex;
   justify-content: space-around;
 }
-.bar-porcent {
+.bar-percent {
   margin: 9px 0;
   font-size: 10px;
 }
 .progress-bars {
   background: var(--red);
-  height: 2rem;
+  height: 32px;
   width: 50%;
-  margin: 1rem auto;
-  border-radius: 0.5rem;
+  margin: 16px auto;
+  border-radius: 16px;
   box-shadow: 1px 0 5px var(--black) inset;
 }
 @media only screen and (max-width: 900px) {
@@ -324,13 +323,12 @@ a.middle-indicator-text {
   text-align: center;
   color: var(--turquoise);
   z-index: 0;
-
 }
 .work-card-items h3 {
   font-size: 20px;
   height: 15%;
- 
-}.work-card-items h4 {
+}
+.work-card-items h4 {
   height: 7%;
 }
 
@@ -387,9 +385,6 @@ a.middle-indicator-text {
   color: var(--white);
   visibility: hidden;
   opacity: 0;
-
-  /* transition effect. not necessary */
-  transition: opacity 0.3s, visibility 0.3s;
 }
 .click-picture:hover .overlay {
   visibility: visible;
@@ -438,23 +433,28 @@ h5 {
 }
 .article h4 {
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   text-transform: uppercase;
+  padding: 0px 0 20px;
 }
+
 .modal-article p {
   text-align: justify;
   line-height: 1.6;
 }
 .tags {
   padding: 10px;
+  font-size: 12px;
 }
 .modal-footer {
   padding: 7px;
   background-color: var(--red);
   color: var(--white);
+  font-size: 15px;
 }
 .modal-footer a {
   color: var(--white);
+  margin: 10px;
 }
 .modal-footer span {
   margin: -5px 10px;
@@ -466,7 +466,7 @@ h5 {
   text-align: center;
 }
 .contact-title {
-  padding: 3em 0 4rem;
+  padding: 16px;
   color: var(--white);
   text-transform: uppercase;
   font-size: 26px;
@@ -477,64 +477,7 @@ h5 {
   line-height: 20px;
 }
 
-form {
-  transition: all 4s ease-in-out;
-}
-.form-control {
-  width: 60%;
-  background: transparent;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid var(--red);
-  color: var(--white);
-  font-size: 18px;
-  margin-bottom: 16px;
-}
-input {
-  height: 45px;
-}
-form .submit {
-  background: var(--red);
-  border-radius: 25px;
-  border-color: transparent;
-  color: var(--white);
-  font-weight: bold;
-  letter-spacing: 1px;
-  height: 50px;
-  margin: 20px 0;
-}
-form .submit:hover {
-  cursor: pointer;
-  background: var(--turquoise);
-}
-.error-name {
-  display: none;
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--red);
-}
-.error-email {
-  display: none;
-  font-weight: 700;
-  font-size: 14px;
-  margin: 0px 150px 0px 150px;
-  color: var(--red);
-}
-.error-message {
-  display: none;
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--red);
-}
-.name-has-error{
-  display: block;
-}
-.email-has-error{
-  display: block;
-}
-.message-has-error{
-  display: block;
-}
+
 .pdf-center {
   text-align: center;
   padding: 20px;
@@ -556,53 +499,69 @@ form .submit:hover {
 
 /* === Start style section footer === */
 
-
 .social-icons {
   display: flex;
   justify-content: center;
   margin: 5px;
-  font-size: 35px;
-}
-.social-icons a {
-  margin: 10px 20px;
-  border-radius: 12px; 
-}
-a .fa-whatsapp{
-  border-radius: 12px;
-}
-.fa-whatsapp{
-  color: var(--green);
-}
-.fa-whatsapp:before {
   font-size: 45px;
 }
-
-.button{
+@media only screen and (max-width: 365px) {
+  .social-icons {
+    font-size: 35px;
+  }
+}
+.social-icons a {
+  margin: 10px 5px;
+}
+@media only screen and (max-width: 330px) {
+  .social-icons a {
+    margin: 10px 0px;
+  }
+}
+.button {
   border-radius: 25px;
 }
-.button,
+.button {
+  background: var(--red);
+  color: var(--white);
+}
+.fa-whatsapp,
+.fa-envelope,
 .fa-github,
 .fa-linkedin,
 .fa-youtube,
 .fa-twitter {
-  background: var(--red);
-  color: var(--white);
+  color: var(--red);
 }
 .fa-download:hover,
-.button:hover,
-.fa-github:hover,
-.fa-linkedin:hover,
-.fa-youtube:hover,
-.fa-twitter:hover {
+.button:hover {
   cursor: pointer;
   background: var(--turquoise);
 }
-.top-up {
+.fa-whatsapp:hover {
+  color: var(--green);
+}
+.fa-envelope:hover {
+  color: var(--yellow);
+}
+.fa-linkedin:hover {
+  color: var(--blue);
+}
+.fa-github:hover {
+  color: var(--portland-orange);
+}
+.fa-twitter:hover {
+  color: var(--light-blue);
+}
+.fa-youtube:hover {
+  color: var(--white);
+}
+.go-to-top {
   text-align: -webkit-right;
   margin-right: 25px;
 }
 /* Button go to up */
-#myBtn {
+#go-up {
   display: none;
   position: fixed;
   bottom: 25px;
@@ -615,4 +574,11 @@ a .fa-whatsapp{
   padding: 17px;
   border-radius: 27px;
 }
+@media only screen and (max-width: 420px) {
+  #go-up {
+    bottom: 63px;
+  }
+}
+
+
 /* === End style section footer === */

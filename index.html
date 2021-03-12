@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/animations.css" />
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" type="text/css" href="css/materializestyle.css" />
     <!--Icon Font awesome-->
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
     <!--Import Google Icon Font-->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -23,25 +20,26 @@
         <a class="link-nav" href="#home">Home</a>
         <a class="link-nav" href="#resume">Resume</a>
         <a class="link-nav" href="#portfolio">Portfolio</a>
-        <a class="link-nav" href="#contact">Contact</a>
       </nav>
     </header>
     <section id="home">
       <div class="carousel carousel-slider center" data-indicators="true">
         <div class="carousel-fixed-item center middle-indicator">
           <div class="left">
-            <a href="#carouselContainer"
-              onclick="movePrevCarousel()"
-              class="middle-indicator-text waves-effect waves-light content-indicator">
+            <a
+              href="#carouselContainer"
+              class="middle-indicator-text waves-effect waves-light content-indicator"
+            >
               <i class="material-icons left middle-indicator-text">
                 chevron_left
               </i>
             </a>
           </div>
           <div class="right">
-            <a href="#carouselContainer"
-              onclick="moveNextCarousel()"
-              class="middle-indicator-text waves-effect waves-light content-indicator">
+            <a
+              href="#carouselContainer"
+              class="middle-indicator-text waves-effect waves-light content-indicator"
+            >
               <i class="material-icons right middle-indicator-text">
                 chevron_right
               </i>
@@ -49,166 +47,129 @@
           </div>
         </div>
         <div class="carousel-item white-text">
-          <div class="slider-picture"></div>
+          <div class="slider-picture slider-picture-developer"></div>
           <div class="banner">
-            <p>
-              Hello!
-            </p>
-            <h2>
-              I'm Victor Pedroza
-            </h2>
+            <p>Hello!</p>
+            <h2>I'm Victor Pedroza</h2>
           </div>
         </div>
         <div class="carousel-item white-text">
-          <div class="slider-picture-code"></div>
+          <div class="slider-picture slider-picture-code"></div>
           <div class="banner">
-            <h2>
-              I'm FrontEnd Developer
-            </h2>
-            <p>
-              Web development is my passion!
-            </p>
+            <h2>I'm FrontEnd Developer</h2>
+            <p>Web development is my passion!</p>
           </div>
         </div>
         <div class="carousel-item white-text">
-          <div class="slider-picture-profession"></div>
+          <div class="slider-picture slider-picture-profession"></div>
           <div class="banner">
-            <p>
-              But Engineering is my profession
-            </p>
-            <h2>
-              Oil and Gas Engineer
-            </h2>
+            <p>But Engineering is my profession</p>
+            <h2>Oil and Gas Engineer</h2>
           </div>
         </div>
       </div>
     </section>
-    
+
     <section id="resume">
       <p class="text-motto">
-        My motto is: 
+        My motto is:
         <br />
         “Experience and Attention to the detail is what quality is made of”
       </p>
-      <h3 class="title">
-        Skills
-      </h3>
+      <h3 class="title">Skills</h3>
       <div id="skills" class="animation-progress">
         <div class="loader-skills"></div>
         <!-- Information from API -->
       </div>
       <br />
-        <h3 class="title">
-          Education
-        </h3>
-        <div id="education" class="flip-card">
-          <div class="loader-education"></div>
-          <!-- Information from API -->
-        </div>
-        <h3 class="title">
-          Work experience
-        </h3>
-        <div id="work-experience" class="flip-card">
-          <div class="loader-work-experience"></div>
-          <!-- Information from API -->
-        </div>
+      <h3 class="title">Education</h3>
+      <div id="education" class="flip-card">
+        <div class="loader-education"></div>
+        <!-- Information from API -->
+      </div>
+      <h3 class="title">Work experience</h3>
+      <div id="work-experience" class="flip-card">
+        <div class="loader-work-experience"></div>
+        <!-- Information from API -->
+      </div>
     </section>
 
     <section id="portfolio">
-      <h3 class="title-portfolio">
-        Check out my job
-      </h3>
+      <h3 class="title-portfolio">Check out my job</h3>
       <div id="portfolio-work-done">
         <div class="loader-portfolio-work-done"></div>
         <!-- Information from API -->
       </div>
     </section>
-    
-    <section id="contact">
-      <div>
-        <div class="contact-title">
-          <h3>
-            Contact me
-          </h3>
-          <p>
-            I'm ready for any challenge!
-          </p>
-        </div>
-        <form id="contact-form" onsubmit="return validForm()">
-            <input
-              id="name" name="name" type="text" class="form-control" placeholder=" Name"
-              title="The name cannot contain numbers or symbols (!@#$%^&)" />
-            <span class="error-name"></span>
-            <br />
-            <input
-              id="email" name="email" type="email" class="form-control" placeholder="Email"
-              title="Please provide only a gmail, yahoo, hotmail(outlook), yandex, or icloud e-mail address" />
-            <span class="error-email"></span>
-            <br />
-            <textarea id="message" name="message" class="form-control" placeholder="Message"  minlength="3" maxlength="100"></textarea>
-            <span class="error-message"></span>
-            <br />
-            <input
-              type="submit"
-              class="form-control submit"
-              value="SEND MESSAGE"
-            />
-            <div id="msjSent"></div>
-        </form>
-        
-        <div class="pdf-center">
-          <p>
-            Download my CV in PDF format
-          </p>
-          <a href="https://vjpb-portfolio.000webhostapp.com/wp-content/uploads/2020/10/Cv-Victor-Pedroza-WD-1.pdf"
-            target="_blank"
-            class="button">
-            <i class="fa fa-download"></i>
-            Download CV
-          </a>
-        </div>
-        <article>
-          <div class="contatc-details">
-            <h3>Contact Details</h3>
-            <p>
-              Victor Julian Pedroza Bello <br />
-              Bogotá – Cundinamarca <br />
-              Write me to Whats App <br />
-            </p>
-            <a href="https://api.whatsapp.com/send/?phone=573002424170"
-            target="_blank"
-            <i class="fa fa-whatsapp"></i>
-            </a>
-              
-          </div>
-        </article>
+
+    <div id="contact">
+      <div class="contact-title">
+        <h3>Contact me</h3>
+        <p>I'm ready for any challenge!</p>
       </div>
-    </section>
+
+      <div class="pdf-center">
+        <p>Download my CV in PDF format</p>
+        <a
+          href="https://vjpb-portfolio.000webhostapp.com/wp-content/uploads/2021/03/1-Victor-Pedroza-English-2.pdf"
+          target="_blank"
+          class="button"
+        >
+          <i class="fa fa-download"></i>
+          Download CV
+        </a>
+      </div>
+      <article>
+        <div class="contatc-details">
+          <h3>Contact Details</h3>
+          <p>
+            Victor Julian Pedroza Bello <br />
+            Bogotá – Cundinamarca <br />
+            +57 (300)242-41-70 <br />
+          </p>
+        </div>
+      </article>
+    </div>
 
     <footer>
       <div class="social-icons">
-        <a href="https://www.linkedin.com/in/victorpedrozabello/"
+        <a
+          href="https://api.whatsapp.com/send/?phone=573002424170"
           target="_blank"
-          class="fa fa-linkedin">
+          class="fa fa-whatsapp"
+        >
         </a>
-        <a href="https://github.com/vjpb"
+        <a
+        href="mailto:vjpb881104@mail.ru"
+        target="_blank"
+        class="fa fa-envelope"
+      >
+      </a>
+        <a
+          href="https://www.linkedin.com/in/vjpb/"
           target="_blank"
-          class="fa fa-github">
+          class="fa fa-linkedin"
+        >
         </a>
-        <a href="https://twitter.com/vjpb"
+        <a href="https://github.com/vjpb" target="_blank" class="fa fa-github">
+        </a>
+        <a
+          href="https://twitter.com/vjpb"
           target="_blank"
-          class="fa fa-twitter">
+          class="fa fa-twitter"
+        >
         </a>
-        <a href="https://www.youtube.com/playlist?list=PLyXK7ryjGR-cJTA3HXS2P0JKeRxq7AXj4"
+        <a
+          href="https://www.youtube.com/playlist?list=PLyXK7ryjGR-cJTA3HXS2P0JKeRxq7AXj4"
           target="_blank"
-          class="fa fa-youtube">
+          class="fa fa-youtube"
+        >
         </a>
+        
       </div>
     </footer>
-    <div class="top-up">
-      <button onclick="topFunction()" id="myBtn" title="Go to top">
-        &#8593;
-      </button>
+    <div class="go-to-top">
+      <button id="go-up" title="Go to top">&#8593;</button>
     </div>
     <div id="myModal" class="modal">
       <div id="data-modal">
@@ -221,7 +182,6 @@
     <script defer src="js/scroll_back_to_top.js"></script>
     <script defer src="js/hightlight_navBar.js"></script>
     <script defer src="js/modal.js"></script>
-    <script defer src="js/prevent_input_contact.js"></script>
     <script defer src="js/autoplay.js"></script>
     <!-- Compiled and minified JavaScript materialize -->
     <script src="js/materialize.min.js"></script>

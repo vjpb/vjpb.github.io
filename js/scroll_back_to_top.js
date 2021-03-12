@@ -1,4 +1,4 @@
-const mybutton = document.querySelector("#myBtn");
+const mybutton = document.querySelector("#go-up");
 
 window.onscroll = function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -7,7 +7,7 @@ window.onscroll = function scrollFunction() {
     mybutton.style.display = "none";
   }
 };
-function topFunction() {
+mybutton.addEventListener('click', () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-}
+});
