@@ -485,7 +485,55 @@ h5 {
   font-size: 18px;
   line-height: 20px;
 }
-
+.form-control {
+  width: 60%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--red);
+  color: var(--white);
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+input {
+  height: 45px;
+}
+form .submit {
+  background: var(--red);
+  border-radius: 25px;
+  border-color: transparent;
+  color: var(--white);
+  font-weight: bold;
+  letter-spacing: 1px;
+  height: 50px;
+  margin: 20px 0;
+}
+form .submit:hover {
+  cursor: pointer;
+  background: var(--turquoise);
+}
+.error-name {
+  display: none;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--red);
+}
+.error-email {
+  display: none;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0px 150px 0px 150px;
+  color: var(--red);
+}
+.error-message {
+  display: none;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--red);
+}
+.has-error{
+  display: block;
+}
 .pdf-center {
   text-align: center;
   padding: 20px;

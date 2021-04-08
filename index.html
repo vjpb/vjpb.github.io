@@ -25,6 +25,7 @@
             <li><a class="link-nav" href="#home">Home</a></li>
             <li><a class="link-nav" href="#resume">Resume</a></li>
             <li><a class="link-nav" href="#portfolio">Portfolio</a></li>
+            <li><a class="link-nav" href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -32,6 +33,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </header>
     <section id="home">
@@ -114,12 +116,38 @@
       </div>
     </section>
 
-    <footer>
-      <div id="contact">
+    <section id="contact">
+      <div>
         <div class="contact-title">
-          <h3>Contact me</h3>
-          <p>I'm ready for any challenge!</p>
+          <h3>
+            Contact me
+          </h3>
+          <p>
+            I'm ready for any challenge!
+          </p>
         </div>
+        <form id="contact-form" onsubmit="return validForm()">
+            <input
+              id="name" name="name" type="text" class="form-control" placeholder="Name"
+              title="The name cannot contain numbers or symbols (!@#$%^&)" />
+            <span class="error-name"></span>
+            <br />
+            <input
+              id="email" name="email" type="email" class="form-control" placeholder="Email"
+              title="Please provide only a gmail, yahoo, hotmail(outlook), yandex, or icloud e-mail address" />
+            <span class="error-email"></span>
+            <br />
+            <textarea id="message" name="message" class="form-control" placeholder="Message"  minlength="3" maxlength="100"></textarea>
+            <span class="error-message"></span>
+            <br />
+            <input
+              type="submit"
+              class="form-control submit"
+              value="SEND MESSAGE"
+            />
+            <div id="msjSent"></div>
+        </form>
+        
 
         <div class="pdf-center">
           <p>Download my CV in PDF format</p>
@@ -143,7 +171,8 @@
           </div>
         </article>
       </div>
-
+    </section>
+    <footer>
       <div class="social-icons">
         <a
           href="https://api.whatsapp.com/send/?phone=573002424170"
@@ -192,6 +221,7 @@
     <script defer src="js/scroll_back_to_top.js"></script>
     <script defer src="js/hightlight_navBar.js"></script>
     <script defer src="js/modal.js"></script>
+    <script defer src="js/prevent_contact.js"></script>
     <script defer src="js/autoplay.js"></script>
     <!-- Compiled and minified JavaScript materialize -->
     <script src="js/materialize.min.js"></script>
