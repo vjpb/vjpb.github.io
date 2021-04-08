@@ -17,10 +17,22 @@
   <body>
     <header>
       <nav>
-        <a class="link-nav" href="#home">Home</a>
-        <a class="link-nav" href="#resume">Resume</a>
-        <a class="link-nav" href="#portfolio">Portfolio</a>
+        <div class="nav-wrapper">
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
+          <ul class="hide-on-med-and-down">
+            <li><a class="link-nav" href="#home">Home</a></li>
+            <li><a class="link-nav" href="#resume">Resume</a></li>
+            <li><a class="link-nav" href="#portfolio">Portfolio</a></li>
+          </ul>
+        </div>
       </nav>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
     </header>
     <section id="home">
       <div class="carousel carousel-slider center" data-indicators="true">
@@ -102,36 +114,36 @@
       </div>
     </section>
 
-    <div id="contact">
-      <div class="contact-title">
-        <h3>Contact me</h3>
-        <p>I'm ready for any challenge!</p>
-      </div>
-
-      <div class="pdf-center">
-        <p>Download my CV in PDF format</p>
-        <a
-          href="https://vjpb-portfolio.000webhostapp.com/wp-content/uploads/2021/03/1-Victor-Pedroza-English-2.pdf"
-          target="_blank"
-          class="button"
-        >
-          <i class="fa fa-download"></i>
-          Download CV
-        </a>
-      </div>
-      <article>
-        <div class="contatc-details">
-          <h3>Contact Details</h3>
-          <p>
-            Victor Julian Pedroza Bello <br />
-            Bogotá – Cundinamarca <br />
-            +57 (300)242-41-70 <br />
-          </p>
-        </div>
-      </article>
-    </div>
-
     <footer>
+      <div id="contact">
+        <div class="contact-title">
+          <h3>Contact me</h3>
+          <p>I'm ready for any challenge!</p>
+        </div>
+
+        <div class="pdf-center">
+          <p>Download my CV in PDF format</p>
+          <a
+            href="https://vjpb-portfolio.000webhostapp.com/wp-content/uploads/2021/03/1-Victor-Pedroza-English-2.pdf"
+            target="_blank"
+            class="button"
+          >
+            <i class="fa fa-download"></i>
+            Download CV
+          </a>
+        </div>
+        <article>
+          <div class="contatc-details">
+            <h3>Contact Details</h3>
+            <p>
+              Victor Julian Pedroza Bello <br />
+              Bogotá – Cundinamarca <br />
+              +57 (300)242-41-70 <br />
+            </p>
+          </div>
+        </article>
+      </div>
+
       <div class="social-icons">
         <a
           href="https://api.whatsapp.com/send/?phone=573002424170"
@@ -140,11 +152,11 @@
         >
         </a>
         <a
-        href="mailto:vjpb881104@mail.ru"
-        target="_blank"
-        class="fa fa-envelope"
-      >
-      </a>
+          href="mailto:vjpb881104@mail.ru"
+          target="_blank"
+          class="fa fa-envelope"
+        >
+        </a>
         <a
           href="https://www.linkedin.com/in/vjpb/"
           target="_blank"
@@ -165,7 +177,6 @@
           class="fa fa-youtube"
         >
         </a>
-        
       </div>
     </footer>
     <div class="go-to-top">
@@ -176,7 +187,6 @@
         <!-- Information from API -->
       </div>
     </div>
-
     <script defer src="js/index.js"></script>
     <script defer src="js/prev_and_next_arrow.js"></script>
     <script defer src="js/scroll_back_to_top.js"></script>

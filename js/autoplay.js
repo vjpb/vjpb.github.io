@@ -110,3 +110,8 @@ function getElements(elms) {
 
   return document.querySelectorAll(elms);
 }
+// initialize for sidevar
+document.addEventListener("DOMContentLoaded", function () {
+  const elems = document.querySelectorAll(".sidenav"),
+    instances = M.Sidenav.init(elems, {});
+});
