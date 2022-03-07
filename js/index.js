@@ -1,6 +1,6 @@
 // APIREST Wordpress
 const url =
-  'https://vjpb-portfolio.000webhostapp.com/wp-json/wp/v2/posts?per_page=50';
+  'http://portfolio-vjpb.epizy.com/wp-json/wp/v2/posts?per_page=50';
 
 fetch(url)
   .then(function (response) {
