@@ -1,6 +1,6 @@
 // APIREST Wordpress
 const url =
-  'http://portfolio-vjpb.epizy.com/wp-json/wp/v2/posts?per_page=50';
+  'https://vitiok04.000webhostapp.com/wp-json/wp/v2/posts?per_page=50';
 
 fetch(url)
   .then(function (response) {
