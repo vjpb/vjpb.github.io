@@ -4,7 +4,7 @@ function openModal(id) {
   if (!isOpen) {
     isOpen = true;
     const jobDone =
-      'https://vjpb-portfolio.000webhostapp.com/wp-json/wp/v2/posts/' + id;
+      'https://vitiok04.000webhostapp.com/wp-json/wp/v2/posts/' + id;
 
     fetch(jobDone)
       .then(function (response) {
